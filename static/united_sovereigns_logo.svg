@@ -1,0 +1,116 @@
+<svg width="680" height="580" viewBox="0 0 680 580" xmlns="http://www.w3.org/2000/svg">
+  <title>United Sovereigns</title>
+  <desc>Dome above open land, mirror roots below, ringed by grain, as above so below</desc>
+
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&amp;display=swap');
+      .nm { font-family:'Cinzel',serif; font-size:34px; font-weight:700; fill:#1B3A2A; letter-spacing:0.14em; }
+      .ns { font-family:'Cinzel',serif; font-size:11px; font-weight:400; fill:#4A7055; letter-spacing:0.30em; }
+      .nt { font-family:'Cinzel',serif; font-size:9px;  font-weight:400; fill:#7A9E80; letter-spacing:0.26em; }
+    </style>
+  </defs>
+
+  <g transform="translate(340,255)">
+
+    <!-- outer border ring -->
+    <circle cx="0" cy="0" r="182" fill="#F4EFE2" stroke="#A8844A" stroke-width="1.8"/>
+    <circle cx="0" cy="0" r="175" fill="none"    stroke="#C8A96E" stroke-width="0.5"/>
+
+    <!-- grain ring: 28 stalks -->
+    <g stroke="#7A9040" stroke-linecap="round" fill="none">
+      <g transform="rotate(0)">   <line x1="0" y1="-175" x2="0" y2="-158" stroke-width="1.2"/> <ellipse cx="-3" cy="-178" rx="3" ry="5.5" fill="#9AB050" stroke="none" transform="rotate(-12,0,-175)"/> </g>
+      <g transform="rotate(13)">  <line x1="0" y1="-175" x2="0" y2="-158" stroke-width="1.2"/> <ellipse cx="3"  cy="-178" rx="3" ry="5.5" fill="#9AB050" stroke="none" transform="rotate(12,0,-175)"/>  </g>
+      <g transform="rotate(26)">  <line x1="0" y1="-175" x2="0" y2="-158" stroke-width="1.2"/> <ellipse cx="-3" cy="-178" rx="3" ry="5.5" fill="#9AB050" stroke="none" transform="rotate(-12,0,-175)"/> </g>
+      <g transform="rotate(39)">  <line x1="0" y1="-175" x2="0" y2="-158" stroke-width="1.2"/> <ellipse cx="3"  cy="-178" rx="3" ry="5.5" fill="#9AB050" stroke="none" transform="rotate(12,0,-175)"/>  </g>
+      <g transform="rotate(52)">  <line x1="0" y1="-175" x2="0" y2="-158" stroke-width="1.2"/> <ellipse cx="-3" cy="-178" rx="3" ry="5.5" fill="#9AB050" stroke="none" transform="rotate(-12,0,-175)"/> </g>
+      <g transform="rotate(65)">  <line x1="0" y1="-175" x2="0" y2="-158" stroke-width="1.2"/> <ellipse cx="3"  cy="-178" rx="3" ry="5.5" fill="#9AB050" stroke="none" transform="rotate(12,0,-175)"/>  </g>
+      <g transform="rotate(78)">  <line x1="0" y1="-175" x2="0" y2="-158" stroke-width="1.2"/> <ellipse cx="-3" cy="-178" rx="3" ry="5.5" fill="#9AB050" stroke="none" transform="rotate(-12,0,-175)"/> </g>
+      <g transform="rotate(91)">  <line x1="0" y1="-175" x2="0" y2="-158" stroke-width="1.2"/> <ellipse cx="3"  cy="-178" rx="3" ry="5.5" fill="#9AB050" stroke="none" transform="rotate(12,0,-175)"/>  </g>
+      <g transform="rotate(104)"> <line x1="0" y1="-175" x2="0" y2="-158" stroke-width="1.2"/> <ellipse cx="-3" cy="-178" rx="3" ry="5.5" fill="#9AB050" stroke="none" transform="rotate(-12,0,-175)"/> </g>
+      <g transform="rotate(117)"> <line x1="0" y1="-175" x2="0" y2="-158" stroke-width="1.2"/> <ellipse cx="3"  cy="-178" rx="3" ry="5.5" fill="#9AB050" stroke="none" transform="rotate(12,0,-175)"/>  </g>
+      <g transform="rotate(130)"> <line x1="0" y1="-175" x2="0" y2="-158" stroke-width="1.2"/> <ellipse cx="-3" cy="-178" rx="3" ry="5.5" fill="#9AB050" stroke="none" transform="rotate(-12,0,-175)"/> </g>
+      <g transform="rotate(143)"> <line x1="0" y1="-175" x2="0" y2="-158" stroke-width="1.2"/> <ellipse cx="3"  cy="-178" rx="3" ry="5.5" fill="#9AB050" stroke="none" transform="rotate(12,0,-175)"/>  </g>
+      <g transform="rotate(156)"> <line x1="0" y1="-175" x2="0" y2="-158" stroke-width="1.2"/> <ellipse cx="-3" cy="-178" rx="3" ry="5.5" fill="#9AB050" stroke="none" transform="rotate(-12,0,-175)"/> </g>
+      <g transform="rotate(169)"> <line x1="0" y1="-175" x2="0" y2="-158" stroke-width="1.2"/> <ellipse cx="3"  cy="-178" rx="3" ry="5.5" fill="#9AB050" stroke="none" transform="rotate(12,0,-175)"/>  </g>
+      <g transform="rotate(182)"> <line x1="0" y1="-175" x2="0" y2="-158" stroke-width="1.2"/> <ellipse cx="-3" cy="-178" rx="3" ry="5.5" fill="#9AB050" stroke="none" transform="rotate(-12,0,-175)"/> </g>
+      <g transform="rotate(195)"> <line x1="0" y1="-175" x2="0" y2="-158" stroke-width="1.2"/> <ellipse cx="3"  cy="-178" rx="3" ry="5.5" fill="#9AB050" stroke="none" transform="rotate(12,0,-175)"/>  </g>
+      <g transform="rotate(208)"> <line x1="0" y1="-175" x2="0" y2="-158" stroke-width="1.2"/> <ellipse cx="-3" cy="-178" rx="3" ry="5.5" fill="#9AB050" stroke="none" transform="rotate(-12,0,-175)"/> </g>
+      <g transform="rotate(221)"> <line x1="0" y1="-175" x2="0" y2="-158" stroke-width="1.2"/> <ellipse cx="3"  cy="-178" rx="3" ry="5.5" fill="#9AB050" stroke="none" transform="rotate(12,0,-175)"/>  </g>
+      <g transform="rotate(234)"> <line x1="0" y1="-175" x2="0" y2="-158" stroke-width="1.2"/> <ellipse cx="-3" cy="-178" rx="3" ry="5.5" fill="#9AB050" stroke="none" transform="rotate(-12,0,-175)"/> </g>
+      <g transform="rotate(247)"> <line x1="0" y1="-175" x2="0" y2="-158" stroke-width="1.2"/> <ellipse cx="3"  cy="-178" rx="3" ry="5.5" fill="#9AB050" stroke="none" transform="rotate(12,0,-175)"/>  </g>
+      <g transform="rotate(260)"> <line x1="0" y1="-175" x2="0" y2="-158" stroke-width="1.2"/> <ellipse cx="-3" cy="-178" rx="3" ry="5.5" fill="#9AB050" stroke="none" transform="rotate(-12,0,-175)"/> </g>
+      <g transform="rotate(273)"> <line x1="0" y1="-175" x2="0" y2="-158" stroke-width="1.2"/> <ellipse cx="3"  cy="-178" rx="3" ry="5.5" fill="#9AB050" stroke="none" transform="rotate(12,0,-175)"/>  </g>
+      <g transform="rotate(286)"> <line x1="0" y1="-175" x2="0" y2="-158" stroke-width="1.2"/> <ellipse cx="-3" cy="-178" rx="3" ry="5.5" fill="#9AB050" stroke="none" transform="rotate(-12,0,-175)"/> </g>
+      <g transform="rotate(299)"> <line x1="0" y1="-175" x2="0" y2="-158" stroke-width="1.2"/> <ellipse cx="3"  cy="-178" rx="3" ry="5.5" fill="#9AB050" stroke="none" transform="rotate(12,0,-175)"/>  </g>
+      <g transform="rotate(312)"> <line x1="0" y1="-175" x2="0" y2="-158" stroke-width="1.2"/> <ellipse cx="-3" cy="-178" rx="3" ry="5.5" fill="#9AB050" stroke="none" transform="rotate(-12,0,-175)"/> </g>
+      <g transform="rotate(325)"> <line x1="0" y1="-175" x2="0" y2="-158" stroke-width="1.2"/> <ellipse cx="3"  cy="-178" rx="3" ry="5.5" fill="#9AB050" stroke="none" transform="rotate(12,0,-175)"/>  </g>
+      <g transform="rotate(338)"> <line x1="0" y1="-175" x2="0" y2="-158" stroke-width="1.2"/> <ellipse cx="-3" cy="-178" rx="3" ry="5.5" fill="#9AB050" stroke="none" transform="rotate(-12,0,-175)"/> </g>
+      <g transform="rotate(351)"> <line x1="0" y1="-175" x2="0" y2="-158" stroke-width="1.2"/> <ellipse cx="3"  cy="-178" rx="3" ry="5.5" fill="#9AB050" stroke="none" transform="rotate(12,0,-175)"/>  </g>
+    </g>
+
+    <!-- inner circle -->
+    <circle cx="0" cy="0" r="150" fill="#EDE8D8" stroke="#B8975A" stroke-width="0.8"/>
+
+    <!-- horizon / land line -->
+    <line x1="-145" y1="8" x2="145" y2="8" stroke="#6A8A50" stroke-width="1.4"/>
+
+    <!-- land hills -->
+    <path d="M -145,8 Q -90,-8 -50,4 Q -10,-12 30,2 Q 70,-14 110,-2 Q 130,4 145,8 Z"
+          fill="#7A9A50" opacity="0.35"/>
+
+    <!-- dome above -->
+    <path d="M -118,8 Q -118,-108 0,-130 Q 118,-108 118,8"
+          fill="#D0E8D8" stroke="#4A7A58" stroke-width="1.6" fill-opacity="0.55"/>
+
+    <!-- dome ribs -->
+    <path d="M 0,8 Q 0,-80 0,-130"      fill="none" stroke="#5A8A60" stroke-width="0.8" stroke-dasharray="4 3" opacity="0.6"/>
+    <path d="M 0,8 Q -42,-68 -88,-108"  fill="none" stroke="#5A8A60" stroke-width="0.7" stroke-dasharray="3 3" opacity="0.5"/>
+    <path d="M 0,8 Q 42,-68 88,-108"    fill="none" stroke="#5A8A60" stroke-width="0.7" stroke-dasharray="3 3" opacity="0.5"/>
+    <path d="M 0,8 Q -80,-30 -118,8"    fill="none" stroke="#5A8A60" stroke-width="0.6" stroke-dasharray="3 3" opacity="0.4"/>
+    <path d="M 0,8 Q 80,-30 118,8"      fill="none" stroke="#5A8A60" stroke-width="0.6" stroke-dasharray="3 3" opacity="0.4"/>
+    <path d="M -100,8 Q -100,-38 0,-52 Q 100,-38 100,8" fill="none" stroke="#5A8A60" stroke-width="0.6" stroke-dasharray="3 3" opacity="0.45"/>
+    <path d="M -60,8 Q -60,-80 0,-96 Q 60,-80 60,8"     fill="none" stroke="#5A8A60" stroke-width="0.6" stroke-dasharray="3 3" opacity="0.35"/>
+
+    <!-- dome keystone -->
+    <circle cx="0" cy="-130" r="5" fill="#4A7A58" stroke="#3A6A48" stroke-width="0.8"/>
+
+    <!-- mirror roots below -->
+    <path d="M -118,8 Q -118,116 0,138 Q 118,116 118,8"
+          fill="#D8C898" stroke="#8A7040" stroke-width="1.4" fill-opacity="0.4"/>
+
+    <!-- root veins -->
+    <path d="M 0,8 Q 0,82 0,138"       fill="none" stroke="#9A8050" stroke-width="0.8" stroke-dasharray="3 3" opacity="0.55"/>
+    <path d="M 0,8 Q -42,72 -88,110"   fill="none" stroke="#9A8050" stroke-width="0.7" stroke-dasharray="3 3" opacity="0.45"/>
+    <path d="M 0,8 Q 42,72 88,110"     fill="none" stroke="#9A8050" stroke-width="0.7" stroke-dasharray="3 3" opacity="0.45"/>
+    <path d="M 0,8 Q -80,38 -118,8"    fill="none" stroke="#9A8050" stroke-width="0.6" stroke-dasharray="3 3" opacity="0.35"/>
+    <path d="M 0,8 Q 80,38 118,8"      fill="none" stroke="#9A8050" stroke-width="0.6" stroke-dasharray="3 3" opacity="0.35"/>
+    <path d="M -100,8 Q -100,44 0,58 Q 100,44 100,8"   fill="none" stroke="#9A8050" stroke-width="0.6" stroke-dasharray="3 3" opacity="0.4"/>
+    <path d="M -60,8 Q -60,84 0,100 Q 60,84 60,8"      fill="none" stroke="#9A8050" stroke-width="0.6" stroke-dasharray="3 3" opacity="0.3"/>
+
+    <!-- root nadir -->
+    <circle cx="0" cy="138" r="5" fill="#8A7040" stroke="#7A6030" stroke-width="0.8"/>
+
+    <!-- centre meeting point -->
+    <circle cx="0" cy="8" r="18" fill="#EAD8A8" stroke="#C8A050" stroke-width="1.2"/>
+    <circle cx="0" cy="8" r="9"  fill="#C8A050" stroke="#A88030" stroke-width="0.6"/>
+    <circle cx="0" cy="8" r="3.5" fill="#F0E0B0"/>
+
+  </g>
+
+  <!-- divider lines -->
+  <line x1="90"  y1="446" x2="590" y2="446" stroke="#A8844A" stroke-width="0.9"/>
+  <line x1="110" y1="450" x2="570" y2="450" stroke="#C8A96E" stroke-width="0.35"/>
+
+  <!-- name -->
+  <text x="340" y="490" text-anchor="middle" class="nm">UNITED SOVEREIGNS</text>
+
+  <!-- side marks -->
+  <line x1="90"  y1="502" x2="234" y2="502" stroke="#C8A96E" stroke-width="0.5"/>
+  <polygon points="340,497 346,506 334,506" fill="#8A7040" opacity="0.75"/>
+  <line x1="446" y1="502" x2="590" y2="502" stroke="#C8A96E" stroke-width="0.5"/>
+
+  <text x="340" y="522" text-anchor="middle" class="ns">FREE ASSEMBLY OF LIVING SOULS</text>
+  <text x="340" y="544" text-anchor="middle" class="nt">AGENDA FOR THE LIVING WAY</text>
+
+</svg>
