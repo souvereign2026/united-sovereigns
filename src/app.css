@@ -134,4 +134,6 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 400; line-height: 1.
   .goals-grid { grid-template-columns: repeat(2, 1fr); }
   .goals { padding: 1.5rem 1rem; }
 }
+
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@300;400;500&family=Cinzel:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&family=Barlow+Condensed:wght@700;900&...');.tile { text-decoration: none; }
