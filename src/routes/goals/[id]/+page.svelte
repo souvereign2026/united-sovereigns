@@ -91,10 +91,11 @@
       <div class="hero-bg" style="background:{goal.gradient ?? goal.color}"></div>
       <div class="hero-inner">
         <div class="hero-nav">
-          <a href="/" class="nav-pill">← All Goals</a>
+          <a href="/" class="nav-pill">Goals</a>
+
           <div class="hero-nav-right">
-            <a href="/goals/{prevGoal().id}" class="nav-pill">← {prevGoal().title}</a>
-            <a href="/goals/{nextGoal().id}" class="nav-pill">Next: {nextGoal().title} →</a>
+            <a href="/goals/{nextGoal().id}" class="nav-pill">Next →</a>
+
           </div>
         </div>
 
@@ -293,17 +294,13 @@
   .nav-pill {
     font-family: sans-serif;
     font-size: 0.72rem;
-    font-weight: 600;
+    font-weight: 800;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--c2);
-    border: 1px solid rgba(255,255,255,0.3);
-    border-radius: 999px;
     padding: 0.35rem 0.9rem;
     text-decoration: none;
-    transition: background 0.2s;
-    backdrop-filter: blur(4px);
-    background: rgba(255,255,255,0.08);
+
   }
 
   .nav-pill:hover {
