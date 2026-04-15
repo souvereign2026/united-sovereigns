@@ -41,3 +41,97 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 400; line-height: 1.
   height: 184px;
   object-fit: contain;
 }
+
+/* ── Goals ── */
+.goals {
+  background: #f5f2eb;
+  padding: 2rem 2rem 2.5rem;
+  border-bottom: 1px solid #e0ddd6;
+}
+
+.goals-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.goals-title {
+  font-family: 'Cinzel', serif;
+  font-size: 33px;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  color: #131212;
+  text-transform: uppercase;
+  margin-bottom: 1.2rem;
+}
+
+.goals-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 10px;
+}
+
+.tile {
+  border-radius: 14px;
+  padding: 12px 10px 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  cursor: default;
+  transition: transform 0.15s, opacity 0.15s;
+  aspect-ratio: 1 / 1.05;
+}
+
+.tile:hover { transform: translateY(-3px); opacity: 0.93; }
+
+.tile-num {
+  font-family: 'Cinzel', serif;
+  font-size: 11px;
+  font-weight: 600;
+  opacity: 0.85;
+}
+
+.tile-icon {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.tile-icon svg { width: 48px; height: 48px; }
+
+.tile-label {
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+.t1  { background: #1B4D3E; color: #A8D5BE; }
+.t2  { background: #7D3C00; color: #F5C87A; }
+.t3  { background: #2C3E6B; color: #A0B8F0; }
+.t4  { background: #5C1A1A; color: #F0A0A0; }
+.t5  { background: #2D5016; color: #B0D878; }
+.t6  { background: #6B3D00; color: #F5B87A; }
+.t7  { background: #0D4F6B; color: #80D4F0; }
+.t8  { background: #1A3D5C; color: #78C8F0; }
+.t9  { background: #4A1A5C; color: #D0A0F0; }
+.t10 { background: #1A4A2E; color: #90D8A8; }
+.t11 { background: #6B4A00; color: #F5C87A; }
+.t12 { background: #3D2800; color: #D4A870; }
+.t13 { background: #1A4A4A; color: #80D8D8; }
+.t14 { background: #4A2800; color: #D4A870; }
+.t15 { background: #1A1A4A; color: #9090F0; }
+.t16 { background: #3D3D00; color: #D4D480; }
+
+@media (max-width: 900px) {
+  .goals-grid { grid-template-columns: repeat(4, 1fr); }
+}
+
+@media (max-width: 480px) {
+  .goals-grid { grid-template-columns: repeat(2, 1fr); }
+  .goals { padding: 1.5rem 1rem; }
+}
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@300;400;500&family=Cinzel:wght@400;600&display=swap');
