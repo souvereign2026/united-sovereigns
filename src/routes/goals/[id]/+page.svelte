@@ -108,34 +108,91 @@
       </div>
     </div>
 
-    <!-- Poster -->
-    <section class="section poster-section">
-      <div class="section-inner">
-        <div class="section-label">Overview</div>
-        <div class="poster-big" style="background:{goal.color}; color:{goal.textColor}">
-          <div class="poster-big-left">
-            <div class="poster-big-num">{goal.id}</div>
-            <div class="poster-big-title">{goal.title}</div>
-            <div class="poster-big-summary">{goal.summary}</div>
+   <!-- ── Infographic Poster ── -->
+<section class="section poster-section">
+  <div class="section-inner">
+    <div class="section-label">Overview</div>
+    <div class="poster-wrap">
+
+      <!-- Left: infographic card -->
+      <div class="infographic" style="background:{goal.gradient ?? goal.color}; color:{goal.textColor}">
+
+        <!-- Header -->
+        <div class="info-header">
+          <div class="info-logo">
+            <img src="/united_sovereigns_logo_emblem.svg" alt="US" style="width:36px;height:36px;filter:brightness(10)"/>
           </div>
-          <div class="poster-big-right">
-            <div class="poster-big-label">Living Principles</div>
-            <div class="poster-big-features">
-              {#each (features[id] ?? []) as feat}
-                <div class="poster-big-feat">
-                  <span class="poster-big-dot" style="background:{goal.textColor}"></span>
-                  {feat}
-                </div>
-              {/each}
-            </div>
+          <div class="info-header-text">
+            <span class="info-report">LIVING WAY REPORT 2026</span>
           </div>
-          <div class="poster-big-watermark">{goal.title}</div>
+          <div class="info-corner"></div>
         </div>
-        <p class="poster-caption">
-          Living Way Goals — United Sovereigns · Goal {goal.id}
-        </p>
+
+        <!-- Circle of goals -->
+        <div class="info-circle-wrap">
+          <svg viewBox="0 0 320 320" width="280" height="280" class="goals-circle">
+            {#each Array(16) as _, i}
+              {@const angle = (i * 360/16 - 90) * Math.PI / 180}
+              {@const r = 130}
+              {@const cx = 160 + r * Math.cos(angle)}
+              {@const cy = 160 + r * Math.sin(angle)}
+              {@const goalColors = ['#0f7a5a','#32085a','#7a2e00','#0d1f5c','#5c0a0a','#1a3a08','#5c2800','#053a52','#051e3e','#083020','#4a2e00','#2a1500','#083030','#301800','#0a0a3a','#282800']}
+              <circle
+                cx={cx} cy={cy} r="16"
+                fill={i === parseInt(id) - 1 ? '#fff' : goalColors[i]}
+                stroke={i === parseInt(id) - 1 ? goal.textColor : 'rgba(255,255,255,0.3)'}
+                stroke-width={i === parseInt(id) - 1 ? '3' : '1'}
+                opacity={i === parseInt(id) - 1 ? '1' : '0.7'}
+              />
+              <text
+                x={cx} y={cy + 4}
+                text-anchor="middle"
+                font-size="9"
+                font-weight="700"
+                fill={i === parseInt(id) - 1 ? goal.color : 'rgba(255,255,255,0.9)'}
+                font-family="sans-serif"
+              >{i + 1}</text>
+            {/each}
+            <!-- Center -->
+            <circle cx="160" cy="160" r="70" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+            <text x="160" y="152" text-anchor="middle" font-size="11" font-weight="700" fill="rgba(255,255,255,0.6)" font-family="sans-serif" letter-spacing="2">GOAL</text>
+            <text x="160" y="175" text-anchor="middle" font-size="42" font-weight="900" fill="#fff" font-family="sans-serif">{goal.id}</text>
+          </svg>
+        </div>
+
+        <!-- Footer bar -->
+        <div class="info-footer">
+          <div class="info-footer-left">
+            <span class="info-goal-num">{goal.id}</span>
+            <span class="info-goal-name">{goal.title.split('.')[0].substring(0, 30)}</span>
+          </div>
+          <div class="info-footer-right">
+            <span>UNITED SOVEREIGNS</span>
+            <span style="opacity:0.6">FREE ASSEMBLY OF LIVING SOULS</span>
+          </div>
+        </div>
       </div>
-    </section>
+
+      <!-- Right: principles -->
+      <div class="poster-right">
+        <div class="poster-big-num" style="color:{goal.color}">{goal.id}</div>
+        <div class="poster-big-title">{goal.title}</div>
+        <div class="poster-big-summary">{goal.summary}</div>
+        <div class="poster-principles">
+          <div class="poster-big-label">Living Principles</div>
+          {#each (features[id] ?? []) as feat}
+            <div class="poster-big-feat">
+              <span class="poster-big-dot" style="background:{goal.color}"></span>
+              {feat}
+            </div>
+          {/each}
+        </div>
+      </div>
+
+    </div>
+    <p class="poster-caption">Living Way Goals — United Sovereigns · Goal {goal.id}</p>
+  </div>
+</section>
 
     <!-- Overview -->
     <section class="section overview-section">
@@ -243,6 +300,8 @@
 <style>
   :global(body) { background: #fff; }
   .goal-page { background: #fff; min-height: 100vh; }
+
+  /* ── Hero ── */
   .hero { position: relative; overflow: hidden; padding-bottom: 3rem; }
   .hero-bg {
     position: absolute; inset: 0;
@@ -262,56 +321,48 @@
     border: 1px solid rgba(255,255,255,0.3); padding: 0.35rem 0.9rem; text-decoration: none;
   }
   .nav-pill:hover { background: rgba(255,255,255,0.2); color: #fff; }
-  .goal-badge {
-    font-family: 'Cinzel', serif; font-size: 0.72rem; letter-spacing: 0.2em;
-    text-transform: uppercase; color: var(--c2); opacity: 0.75; margin-bottom: 0.75rem;
-  }
-  .hero-content h1 {
-    font-family: sans-serif; font-size: clamp(1.2rem, 3vw, 2rem); max-width: 800px;
-    font-weight: 600; color: #fff; line-height: 1.1; margin-bottom: 1rem; letter-spacing: -0.02em;
-  }
+  .goal-badge { font-family: 'Cinzel', serif; font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--c2); opacity: 0.75; margin-bottom: 0.75rem; }
+  .hero-content h1 { font-family: sans-serif; font-size: clamp(1.2rem, 3vw, 2rem); max-width: 800px; font-weight: 600; color: #fff; line-height: 1.1; margin-bottom: 1rem; letter-spacing: -0.02em; }
   .title-bar { width: 48px; height: 4px; background: #fff; opacity: 0.7; margin-bottom: 1.5rem; border-radius: 2px; }
   .hero-summary { font-family: sans-serif; font-size: 1rem; color: var(--c2); line-height: 1.7; opacity: 0.9; }
-  .poster-section { background: #f5f5f5; }
-  .poster-big {
-    border-radius: 16px; padding: 3.5rem;
-    display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;
-    position: relative; overflow: hidden; min-height: 420px; box-shadow: 0 12px 48px rgba(0,0,0,0.2);
-  }
-  .poster-big::before {
-    content: ''; position: absolute; inset: 0;
-    background: linear-gradient(135deg, rgba(255,255,255,0.12) 0%, transparent 50%); pointer-events: none;
-  }
-  .poster-big::after {
-    content: ''; position: absolute; bottom: -40px; right: -40px;
-    width: 300px; height: 300px; border-radius: 50%; background: rgba(255,255,255,0.04); pointer-events: none;
-  }
-  .poster-big-watermark {
-    position: absolute; bottom: 1.5rem; right: 2rem; font-family: sans-serif;
-    font-size: 0.65rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.2em; opacity: 0.2;
-  }
-  .poster-big-num { font-family: 'Cinzel', serif; font-size: 6rem; font-weight: 600; line-height: 1; opacity: 0.25; margin-bottom: 1rem; }
-  .poster-big-title { font-family: sans-serif; font-size: 2.2rem; font-weight: 900; line-height: 1.1; margin-bottom: 1rem; letter-spacing: -0.02em; }
-  .poster-big-summary { font-family: sans-serif; font-size: 0.95rem; line-height: 1.7; opacity: 0.8; }
-  .poster-big-label { font-family: sans-serif; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; opacity: 0.6; margin-bottom: 1.25rem; }
-  .poster-big-features { display: flex; flex-direction: column; gap: 0.85rem; }
-  .poster-big-feat { font-family: sans-serif; font-size: 0.88rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; display: flex; align-items: center; gap: 0.75rem; line-height: 1.3; }
-  .poster-big-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; opacity: 0.7; }
-  .poster-caption { font-family: sans-serif; font-size: 0.7rem; color: #aaa; margin-top: 0.75rem; letter-spacing: 0.05em; }
-  @media (max-width: 700px) {
-    .poster-big { grid-template-columns: 1fr; padding: 2rem; min-height: auto; gap: 2rem; }
-    .poster-big-num { font-size: 4rem; }
-    .poster-big-title { font-size: 1.6rem; }
-  }
+
+  /* ── Sections ── */
   .section { padding: 3.5rem 2rem; border-bottom: 1px solid #eee; }
   .section-inner { max-width: 1100px; margin: 0 auto; }
   .section-label { font-family: sans-serif; font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: #999; margin-bottom: 1.75rem; padding-bottom: 0.6rem; border-bottom: 1px solid #eee; }
+
+  /* ── Poster ── */
+  .poster-section { background: #f0f0f0; }
+  .poster-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; align-items: center; }
+  .infographic { border-radius: 16px; overflow: hidden; box-shadow: 0 16px 48px rgba(0,0,0,0.25); display: flex; flex-direction: column; }
+  .info-header { display: flex; align-items: center; gap: 0.75rem; padding: 1rem 1.25rem; background: rgba(0,0,0,0.2); position: relative; }
+  .info-report { font-family: sans-serif; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; opacity: 0.9; }
+  .info-corner { position: absolute; top: 0; right: 0; width: 60px; height: 60px; background: rgba(255,255,255,0.15); clip-path: polygon(100% 0, 0 0, 100% 100%); }
+  .info-circle-wrap { display: flex; justify-content: center; align-items: center; padding: 1.5rem 0; }
+  .info-footer { background: rgba(0,0,0,0.3); padding: 0.85rem 1.25rem; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+  .info-footer-left { display: flex; align-items: center; gap: 0.75rem; }
+  .info-goal-num { font-family: sans-serif; font-size: 1.4rem; font-weight: 900; opacity: 0.9; }
+  .info-goal-name { font-family: sans-serif; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; opacity: 0.7; max-width: 120px; line-height: 1.3; }
+  .info-footer-right { display: flex; flex-direction: column; align-items: flex-end; font-family: sans-serif; font-size: 0.55rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; gap: 0.2rem; }
+  .poster-right { display: flex; flex-direction: column; gap: 1rem; }
+  .poster-big-num { font-family: 'Cinzel', serif; font-size: 5rem; font-weight: 600; line-height: 1; opacity: 0.3; }
+  .poster-big-title { font-family: sans-serif; font-size: 1.6rem; font-weight: 900; line-height: 1.2; color: #111; letter-spacing: -0.02em; }
+  .poster-big-summary { font-family: sans-serif; font-size: 0.9rem; line-height: 1.7; color: #555; }
+  .poster-principles { display: flex; flex-direction: column; gap: 0.6rem; margin-top: 0.5rem; }
+  .poster-big-label { font-family: sans-serif; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: #999; margin-bottom: 0.5rem; }
+  .poster-big-feat { font-family: sans-serif; font-size: 0.82rem; font-weight: 600; display: flex; align-items: center; gap: 0.6rem; color: #333; line-height: 1.3; }
+  .poster-big-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; opacity: 0.8; }
+  .poster-caption { font-family: sans-serif; font-size: 0.7rem; color: #aaa; margin-top: 0.75rem; letter-spacing: 0.05em; }
+
+  /* ── Overview ── */
   .overview-grid { display: grid; grid-template-columns: 3fr 2fr; gap: 3rem; align-items: start; }
   .overview-text p { font-family: sans-serif; font-size: 0.95rem; color: #333; line-height: 1.9; }
   .overview-features h3 { font-family: sans-serif; font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #555; margin-bottom: 1rem; }
   .overview-features ul { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
   .overview-features li { font-family: sans-serif; font-size: 0.85rem; color: #444; display: flex; align-items: center; gap: 0.6rem; line-height: 1.4; }
   .feat-marker { width: 8px; height: 8px; border-radius: 2px; flex-shrink: 0; }
+
+  /* ── Related ── */
   .related-section { background: #fafafa; }
   .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; }
   .related-tile { border-radius: 10px; padding: 1.25rem 1rem; text-decoration: none; display: flex; flex-direction: column; gap: 0.4rem; transition: transform 0.15s, box-shadow 0.15s; position: relative; overflow: hidden; }
@@ -320,6 +371,8 @@
   .related-num { font-family: 'Cinzel', serif; font-size: 0.7rem; opacity: 0.6; }
   .related-title { font-family: sans-serif; font-size: 0.85rem; font-weight: 700; line-height: 1.3; }
   .related-arrow { font-size: 0.85rem; margin-top: 0.5rem; opacity: 0.6; }
+
+  /* ── Records + News ── */
   .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
   .pub-list { display: flex; flex-direction: column; gap: 1rem; }
   .pub-item { display: flex; gap: 1rem; align-items: flex-start; padding: 1rem; background: #fafafa; border: 1px solid #eee; border-radius: 6px; }
@@ -335,21 +388,25 @@
   .empty-pubs { padding: 2rem; background: #fafafa; border: 1px dashed #ddd; border-radius: 6px; text-align: center; }
   .empty-pubs p { font-family: sans-serif; font-size: 0.85rem; color: #999; margin-bottom: 0.75rem; }
   .upload-link { font-family: sans-serif; font-size: 0.82rem; font-weight: 600; text-decoration: none; }
-  .news-list { display: flex; flex-direction: column; gap: 0; }
+  .news-list { display: flex; flex-direction: column; }
   .news-item { display: flex; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid #eee; position: relative; }
   .news-bar { position: absolute; left: 0; top: 0; bottom: 0; width: 3px; border-radius: 2px; opacity: 0; transition: opacity 0.2s; }
   .news-item:hover .news-bar { opacity: 1; }
   .news-date { font-family: 'Cinzel', serif; font-size: 0.65rem; color: #aaa; white-space: nowrap; padding-top: 0.15rem; width: 60px; flex-shrink: 0; }
   .news-title { font-family: sans-serif; font-size: 0.85rem; font-weight: 600; color: #222; line-height: 1.4; margin-bottom: 0.2rem; }
   .news-source { font-family: sans-serif; font-size: 0.7rem; color: #aaa; font-style: italic; }
+
+  /* ── Bottom nav ── */
   .bottom-nav { display: flex; align-items: center; justify-content: center; gap: 1rem; padding: 2.5rem 2rem; background: #fafafa; border-top: 1px solid #eee; flex-wrap: wrap; }
   .bottom-btn { font-family: sans-serif; font-size: 0.78rem; font-weight: 600; padding: 0.6rem 1.25rem; border-radius: 999px; border: 2px solid; text-decoration: none; transition: all 0.15s; }
   .bottom-btn:hover { opacity: 0.8; }
   .bottom-btn-center { font-family: sans-serif; font-size: 0.78rem; font-weight: 700; padding: 0.6rem 1.5rem; border-radius: 999px; color: #fff; text-decoration: none; transition: opacity 0.15s; }
   .bottom-btn-center:hover { opacity: 0.85; color: #fff; }
   .not-found { padding: 5rem; text-align: center; font-family: sans-serif; color: #888; background: #fff; min-height: 100vh; }
+
+  /* ── Responsive ── */
   @media (max-width: 900px) {
-    .hero-poster { display: none; }
+    .poster-wrap { grid-template-columns: 1fr; }
     .overview-grid { grid-template-columns: 1fr; gap: 1.5rem; }
     .two-col { grid-template-columns: 1fr; gap: 2rem; }
     .related-grid { grid-template-columns: 1fr 1fr; }
