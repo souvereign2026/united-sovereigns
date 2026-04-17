@@ -111,7 +111,7 @@
     <!-- Poster -->
     <section class="section poster-section">
       <div class="section-inner">
-        <div class="section-label">Overview Poster</div>
+        <div class="section-label">Overview</div>
         <div class="poster-big" style="background:{goal.color}; color:{goal.textColor}">
           <div class="poster-big-left">
             <div class="poster-big-num">{goal.id}</div>
@@ -267,8 +267,8 @@
     text-transform: uppercase; color: var(--c2); opacity: 0.75; margin-bottom: 0.75rem;
   }
   .hero-content h1 {
-    font-family: sans-serif; font-size: clamp(2.2rem, 5vw, 3.5rem);
-    font-weight: 900; color: #fff; line-height: 1.1; margin-bottom: 1rem; letter-spacing: -0.02em;
+    font-family: sans-serif; font-size: clamp(1.2rem, 3vw, 2rem); max-width: 800px;
+    font-weight: 600; color: #fff; line-height: 1.1; margin-bottom: 1rem; letter-spacing: -0.02em;
   }
   .title-bar { width: 48px; height: 4px; background: #fff; opacity: 0.7; margin-bottom: 1.5rem; border-radius: 2px; }
   .hero-summary { font-family: sans-serif; font-size: 1rem; color: var(--c2); line-height: 1.7; opacity: 0.9; }
