@@ -37,7 +37,7 @@
 	  <img src="/united_sovereigns_logo.svg" alt="DocShelf logo" class="brand-logo-img" />
         <div class="brand-text">
           <span class="brand-name">United <br> Sovereigns</span>
-          <span class="brand-sub">Free assembly of Living Souls</span>
+          <span class="brand-sub">Open circle of Living Souls</span>
         </div>
       </a>
 
