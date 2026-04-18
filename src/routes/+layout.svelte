@@ -158,10 +158,10 @@
 
   .brand-name {
     font-size: 3.4rem;
-    font-weight: 700;
+    font-weight: 500;
     color: #5c1f85;
-    font-family: sans-serif;
-    line-height: 1.2;
+    font-family: Koulen;
+    line-height: 1;
   }
 
   .brand-sub {
