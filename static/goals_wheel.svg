@@ -1,0 +1,82 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <g transform="translate(100,100)">
+
+    <!-- 16 segments, each 22.5 degrees -->
+    <!-- Goal 1: #0f7a5a green -->
+    <path d="M0,0 L0,-85 A85,85 0 0,1 32.5,-79.5 Z" fill="#0f7a5a"/>
+    <path d="M0,0 L32.5,-79.5 A85,85 0 0,1 61,-61 Z" fill="#1db87a"/>
+
+    <!-- Goal 2: #32085a purple -->
+    <path d="M0,0 L61,-61 A85,85 0 0,1 79.5,-32.5 Z" fill="#32085a"/>
+    <path d="M0,0 L79.5,-32.5 A85,85 0 0,1 85,0 Z" fill="#9030c0"/>
+
+    <!-- Goal 3: #7a2e00 brown -->
+    <path d="M0,0 L85,0 A85,85 0 0,1 79.5,32.5 Z" fill="#7a2e00"/>
+    <path d="M0,0 L79.5,32.5 A85,85 0 0,1 61,61 Z" fill="#c96a00"/>
+
+    <!-- Goal 4: #0d1f5c navy -->
+    <path d="M0,0 L61,61 A85,85 0 0,1 32.5,79.5 Z" fill="#0d1f5c"/>
+    <path d="M0,0 L32.5,79.5 A85,85 0 0,1 0,85 Z" fill="#3a6ae8"/>
+
+    <!-- Goal 5: #5c0a0a dark red -->
+    <path d="M0,0 L0,85 A85,85 0 0,1 -32.5,79.5 Z" fill="#5c0a0a"/>
+    <path d="M0,0 L-32.5,79.5 A85,85 0 0,1 -61,61 Z" fill="#e04040"/>
+
+    <!-- Goal 6: #1a3a08 dark green -->
+    <path d="M0,0 L-61,61 A85,85 0 0,1 -79.5,32.5 Z" fill="#1a3a08"/>
+    <path d="M0,0 L-79.5,32.5 A85,85 0 0,1 -85,0 Z" fill="#4a9a18"/>
+
+    <!-- Goal 7: #5c2800 dark orange -->
+    <path d="M0,0 L-85,0 A85,85 0 0,1 -79.5,-32.5 Z" fill="#5c2800"/>
+    <path d="M0,0 L-79.5,-32.5 A85,85 0 0,1 -61,-61 Z" fill="#c87820"/>
+
+    <!-- Goal 8: #053a52 dark teal -->
+    <path d="M0,0 L-61,-61 A85,85 0 0,1 -32.5,-79.5 Z" fill="#053a52"/>
+    <path d="M0,0 L-32.5,-79.5 A85,85 0 0,1 0,-85 Z" fill="#10a8d8"/>
+
+    <!-- Inner ring - lighter versions -->
+    <path d="M0,0 L0,-52 A52,52 0 0,1 19.8,-48.5 Z" fill="#1db87a" opacity="0.9"/>
+    <path d="M0,0 L19.8,-48.5 A52,52 0 0,1 36.8,-36.8 Z" fill="#9030c0" opacity="0.9"/>
+    <path d="M0,0 L36.8,-36.8 A52,52 0 0,1 48.5,-19.8 Z" fill="#c96a00" opacity="0.9"/>
+    <path d="M0,0 L48.5,-19.8 A52,52 0 0,1 52,0 Z" fill="#3a6ae8" opacity="0.9"/>
+    <path d="M0,0 L52,0 A52,52 0 0,1 48.5,19.8 Z" fill="#e04040" opacity="0.9"/>
+    <path d="M0,0 L48.5,19.8 A52,52 0 0,1 36.8,36.8 Z" fill="#4a9a18" opacity="0.9"/>
+    <path d="M0,0 L36.8,36.8 A52,52 0 0,1 19.8,48.5 Z" fill="#c87820" opacity="0.9"/>
+    <path d="M0,0 L19.8,48.5 A52,52 0 0,1 0,52 Z" fill="#10a8d8" opacity="0.9"/>
+    <path d="M0,0 L0,52 A52,52 0 0,1 -19.8,48.5 Z" fill="#083020" opacity="0.9"/>
+    <path d="M0,0 L-19.8,48.5 A52,52 0 0,1 -36.8,36.8 Z" fill="#c08010" opacity="0.9"/>
+    <path d="M0,0 L-36.8,36.8 A52,52 0 0,1 -48.5,19.8 Z" fill="#8a5818" opacity="0.9"/>
+    <path d="M0,0 L-48.5,19.8 A52,52 0 0,1 -52,0 Z" fill="#18a0a0" opacity="0.9"/>
+    <path d="M0,0 L-52,0 A52,52 0 0,1 -48.5,-19.8 Z" fill="#a05810" opacity="0.9"/>
+    <path d="M0,0 L-48.5,-19.8 A52,52 0 0,1 -36.8,-36.8 Z" fill="#3030b8" opacity="0.9"/>
+    <path d="M0,0 L-36.8,-36.8 A52,52 0 0,1 -19.8,-48.5 Z" fill="#888800" opacity="0.9"/>
+    <path d="M0,0 L-19.8,-48.5 A52,52 0 0,1 0,-52 Z" fill="#0f7a5a" opacity="0.9"/>
+
+    <!-- White center circle -->
+    <circle cx="0" cy="0" r="30" fill="#fff"/>
+
+    <!-- Gap lines between segments -->
+    <g stroke="#fff" stroke-width="2">
+      <line x1="0" y1="0" x2="0" y2="-85"/>
+      <line x1="0" y1="0" x2="32.5" y2="-79.5"/>
+      <line x1="0" y1="0" x2="61" y2="-61"/>
+      <line x1="0" y1="0" x2="79.5" y2="-32.5"/>
+      <line x1="0" y1="0" x2="85" y2="0"/>
+      <line x1="0" y1="0" x2="79.5" y2="32.5"/>
+      <line x1="0" y1="0" x2="61" y2="61"/>
+      <line x1="0" y1="0" x2="32.5" y2="79.5"/>
+      <line x1="0" y1="0" x2="0" y2="85"/>
+      <line x1="0" y1="0" x2="-32.5" y2="79.5"/>
+      <line x1="0" y1="0" x2="-61" y2="61"/>
+      <line x1="0" y1="0" x2="-79.5" y2="32.5"/>
+      <line x1="0" y1="0" x2="-85" y2="0"/>
+      <line x1="0" y1="0" x2="-79.5" y2="-32.5"/>
+      <line x1="0" y1="0" x2="-61" y2="-61"/>
+      <line x1="0" y1="0" x2="-32.5" y2="-79.5"/>
+    </g>
+
+    <!-- Inner ring separator -->
+    <circle cx="0" cy="0" r="52" fill="none" stroke="#fff" stroke-width="2"/>
+    <circle cx="0" cy="0" r="85" fill="none" stroke="#fff" stroke-width="2"/>
+  </g>
+</svg>
