@@ -345,7 +345,7 @@
   }
 
   .btn-ghost {
-    font-family: var(--font-mono);
+    font-family: Koulen;
     font-size: 0.75rem;
     letter-spacing: 0.06em;
     text-transform: uppercase;
@@ -362,7 +362,7 @@
   }
 
   .btn-submit {
-    font-family: var(--font-mono);
+    font-family: Koulen;
     font-size: 0.75rem;
     font-weight: 500;
     letter-spacing: 0.06em;

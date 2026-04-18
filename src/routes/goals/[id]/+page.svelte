@@ -102,7 +102,6 @@
 
 <svelte:head>
   <title>{goal?.title ?? 'Goal'} — Living Way Goals</title>
-  <link href="https://fonts.googleapis.com/css2?family=Koulen&display=swap" rel="stylesheet"/>
 </svelte:head>
 
 {#if !goal}
@@ -317,9 +316,10 @@
   .hero-bg::after { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 80% 50%, rgba(255,255,255,0.08) 0%, transparent 70%); }
   .hero-inner { position: relative; z-index: 1; max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
   .hero-nav { display: flex; align-items: center; padding: 1.25rem 0; }
-  .nav-pill { font-family: sans-serif; font-size: 0.72rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: var(--c2); border: 1px solid rgba(255,255,255,0.3); padding: 0.35rem 0.9rem; text-decoration: none; transition: background 0.15s; }
+  .nav-pill {    font-family: Koulen;    font-size: 0.72rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: var(--c2); border: 1px solid rgba(255,255,255,0.3); padding: 0.35rem 0.9rem; text-decoration: none; transition: background 0.15s; }
   .nav-pill:hover { background: rgba(255,255,255,0.2); color: #fff; }
-  .goal-badge { font-family: 'Cinzel', serif; font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--c2); opacity: 0.75; margin-bottom: 0.75rem; }
+  .goal-badge { 
+        font-family: Koulen; font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--c2); opacity: 0.75; margin-bottom: 0.75rem; }
   .hero-content { padding: 0.5rem 0 3rem; max-width: 65%; }
   .hero-content h1 { font-family: Koulen; font-size: clamp(1.4rem, 3.5vw, 2.4rem); font-weight: 500; color: #fff; line-height: 1.15; margin-bottom: 0.75rem; }
   .title-bar { width: 48px; height: 4px; background: #fff; opacity: 0.7; margin-bottom: 1.25rem; border-radius: 2px; }
@@ -327,7 +327,7 @@
 
   .next-btn {
     display: inline-block;
-    font-family: sans-serif;
+       font-family: Koulen;
     font-size: 0.8rem;
     font-weight: 700;
     letter-spacing: 0.06em;
@@ -352,7 +352,8 @@
   /* ── Sections ── */
   .section { padding: 3.5rem 2rem; border-bottom: 1px solid #eee; }
   .section-inner { max-width: 1100px; margin: 0 auto; }
-  .section-label { font-family: sans-serif; font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: #999; margin-bottom: 1.75rem; padding-bottom: 0.6rem; border-bottom: 1px solid #eee; }
+  .section-label {     font-family: Koulen;
+ font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: #999; margin-bottom: 1.75rem; padding-bottom: 0.6rem; border-bottom: 1px solid #eee; }
 
   /* ── Poster ── */
   .poster-section { background: #f0f0f0; }
@@ -367,20 +368,27 @@
   .info-footer-left { display: flex; align-items: center; gap: 0.75rem; }
   .info-goal-num { font-family: 'Koulen', sans-serif; font-size: 1.8rem; opacity: 0.9; }
   .info-goal-name { font-family: 'Koulen', sans-serif; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.06em; opacity: 0.85; line-height: 1.3; }
-  .info-goal-sub { font-family: sans-serif; font-size: 0.5rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.6; margin-top: 0.1rem; }
+  .info-goal-sub {     font-family: Koulen;    font-size: 0.5rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.6; margin-top: 0.1rem; }
   .info-footer-right { display: flex; flex-direction: column; align-items: flex-end; font-family: 'Koulen', sans-serif; font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; gap: 0.2rem; }
 
   /* ── Under poster ── */
   .under-poster { display: grid; grid-template-columns: 3fr 2fr; gap: 3rem; margin-top: 3rem; width: 100%; max-width: 860px; align-items: start; }
-  .up-num { font-family: 'Cinzel', serif; font-size: 5rem; font-weight: 600; line-height: 1; opacity: 0.2; margin-bottom: 0.5rem; }
-  .up-title { font-family: sans-serif; font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 900; color: #111; line-height: 1.2; margin-bottom: 0.75rem; }
-  .up-summary { font-family: sans-serif; font-size: 1rem; color: #555; line-height: 1.7; margin-bottom: 1rem; font-style: italic; }
-  .up-desc { font-family: sans-serif; font-size: 0.92rem; color: #444; line-height: 1.9; }
-  .up-label { font-family: sans-serif; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: #999; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid #eee; }
+  .up-num {     font-family: Koulen;
+ serif; font-size: 5rem; font-weight: 600; line-height: 1; opacity: 0.2; margin-bottom: 0.5rem; }
+  .up-title {     font-family: Koulen;
+ font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 900; color: #111; line-height: 1.2; margin-bottom: 0.75rem; }
+  .up-summary {     font-family: Koulen;
+ font-size: 1rem; color: #555; line-height: 1.7; margin-bottom: 1rem; font-style: italic; }
+  .up-desc {    font-family: Koulen;
+font-size: 0.92rem; color: #444; line-height: 1.9; }
+  .up-label {     font-family: Koulen;
+ font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: #999; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid #eee; }
   .up-list { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; }
-  .up-list li { font-family: sans-serif; font-size: 0.88rem; font-weight: 600; color: #222; display: flex; align-items: center; gap: 0.75rem; line-height: 1.4; }
+  .up-list li {     font-family: Koulen;
+ font-size: 0.88rem; font-weight: 600; color: #222; display: flex; align-items: center; gap: 0.75rem; line-height: 1.4; }
   .up-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
-  .poster-caption { font-family: sans-serif; font-size: 0.7rem; color: #aaa; margin-top: 1.5rem; letter-spacing: 0.05em; align-self: flex-start; }
+  .poster-caption {     font-family: Koulen;
+font-size: 0.7rem; color: #aaa; margin-top: 1.5rem; letter-spacing: 0.05em; align-self: flex-start; }
 
   /* ── Related ── */
   .related-section { background: #fafafa; }
@@ -389,7 +397,8 @@
   .related-tile::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, transparent 60%); }
   .related-tile:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.2); }
   .related-num { font-family: 'Cinzel', serif; font-size: 0.7rem; opacity: 0.6; }
-  .related-title { font-family: sans-serif; font-size: 0.85rem; font-weight: 700; line-height: 1.3; }
+  .related-title {     font-family: Koulen;
+font-size: 0.85rem; font-weight: 700; line-height: 1.3; }
   .related-arrow { font-size: 0.85rem; margin-top: 0.5rem; opacity: 0.6; }
 
   /* ── Records + News ── */
@@ -397,8 +406,10 @@
   .pub-list { display: flex; flex-direction: column; gap: 1rem; }
   .pub-item { display: flex; gap: 1rem; align-items: flex-start; padding: 1rem; background: #fafafa; border: 1px solid #eee; border-radius: 6px; }
   .pub-icon { width: 36px; height: 36px; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 0.9rem; color: #fff; flex-shrink: 0; }
-  .pub-title { font-family: sans-serif; font-size: 0.85rem; font-weight: 700; color: #111; margin-bottom: 0.2rem; }
-  .pub-meta { font-family: sans-serif; font-size: 0.72rem; color: #999; margin-bottom: 0.6rem; }
+  .pub-title {     font-family: Koulen;
+ font-size: 0.85rem; font-weight: 700; color: #111; margin-bottom: 0.2rem; }
+  .pub-meta {     font-family: Koulen;
+font-size: 0.72rem; color: #999; margin-bottom: 0.6rem; }
   .pub-actions { display: flex; gap: 0.5rem; }
   .pub-btn-read, .pub-btn-dl { font-family: sans-serif; font-size: 0.7rem; font-weight: 600; padding: 0.25rem 0.7rem; border-radius: 999px; text-decoration: none; transition: all 0.15s; }
   .pub-btn-read { background: #009edb; color: #fff; }

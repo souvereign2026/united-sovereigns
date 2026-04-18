@@ -316,7 +316,7 @@
   }
 
   .hero-content h1 {
-    font-family: sans-serif;
+    font-family: Koulen;
     font-size: clamp(1.8rem, 3.5vw, 2.6rem);
     font-weight: 600;
     color: #111;

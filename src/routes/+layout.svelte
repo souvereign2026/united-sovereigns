@@ -111,7 +111,7 @@
     cursor: pointer;
     background: none;
     border: none;
-    font-family: sans-serif;
+    font-family: Koulen;
     transition: background 0.15s, color 0.15s;
   }
 
@@ -161,13 +161,14 @@
     font-weight: 500;
     color: #5c1f85;
     font-family: Koulen;
-    line-height: 1;
+    line-height: 1
+    ;
   }
 
   .brand-sub {
     font-size: 0.85rem;
     color: #555;
-    font-family: sans-serif;
+    font-family: Koulen;
   }
 
   .masthead-search {
@@ -186,7 +187,7 @@
     width: 220px;
     background: #fff;
     color: #222;
-    font-family: sans-serif;
+    font-family: Koulen;
   }
 
   .search-btn {
@@ -218,7 +219,7 @@
 
   .navbar-inner a {
     color: #fff;
-    font-family: sans-serif;
+    font-family: Koulen;
     font-size: 0.85rem;
     padding: 0.85rem 1.25rem;
     display: flex;
@@ -254,7 +255,7 @@
 
   .mobile-menu a {
     color: #fff;
-    font-family: sans-serif;
+    font-family: Koulen;
     font-size: 0.9rem;
     padding: 0.9rem 1.5rem;
     border-bottom: 1px solid rgba(255,255,255,0.08);
@@ -273,7 +274,7 @@
     display: flex;
     justify-content: space-between;
     font-size: 0.75rem;
-    font-family: sans-serif;
+    font-family: Koulen;
   }
 
   .dim { font-style: italic; }

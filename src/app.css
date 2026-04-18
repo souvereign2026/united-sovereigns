@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@300;400;500&family=Cinzel:wght@400;600&family=Oswald:wght@600;700&family=Barlow+Condensed:wght@700;900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Koulen&family=Cinzel:wght@400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@300;400;500&display=swap');
 :root {
   --bg: #0a0a0a;
   --bg-2: #111111;
@@ -22,9 +22,12 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { font-size: 16px; -webkit-text-size-adjust: 100%; }
 body {
-  background: var(--bg); color: var(--text);
-  font-family: var(--font-mono); font-size: 0.875rem;
-  line-height: 1.6; min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Koulen', sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  min-height: 100vh;
   -webkit-font-smoothing: antialiased;
 }
 a { color: var(--accent); text-decoration: none; transition: color 0.2s; }
