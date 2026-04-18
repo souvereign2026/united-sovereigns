@@ -119,28 +119,28 @@
       <div class="hero-inner">
         <div class="hero-nav">
           <a href="/" class="nav-pill">Goals</a>
-          <div class="hero-nav-right">
-            <a href="/goals/{nextGoal().id}" class="nav-pill">Next →</a>
-          </div>
         </div>
         <div class="hero-content">
           <div class="goal-badge">Goal {goal.id}</div>
           <h1>{goal.title}</h1>
           <div class="title-bar"></div>
           <p class="hero-summary">{goal.summary}</p>
+<a href="/goals/{nextGoal().id}" class="next-btn">Next →</a>
         </div>
+
+        <!-- Figures: 3x smaller -->
         <div class="hero-figures">
-          <svg viewBox="0 0 360 110" width="420" height="130" xmlns="http://www.w3.org/2000/svg">
+          <svg viewBox="0 0 360 110" width="140" height="44" xmlns="http://www.w3.org/2000/svg">
             {#each [40, 90, 140, 180, 220, 270, 320] as x}
               <circle cx={x} cy={10} r="9" fill="none" stroke="white" stroke-width="1" opacity="0.4"/>
               <circle cx={x} cy={10} r="7" fill="white" opacity="0.9"/>
               <line x1={x} y1="17" x2={x} y2="58" stroke="white" stroke-width="4.5" stroke-linecap="round" opacity="0.9"/>
-              <line x1={x - 16} y1="32" x2={x} y2="28" stroke="white" stroke-width="3" stroke-linecap="round" opacity="0.9"/>
-              <line x1={x} y1="28" x2={x + 16} y2="32" stroke="white" stroke-width="3" stroke-linecap="round" opacity="0.9"/>
-              <line x1={x} y1="58" x2={x - 12} y2="88" stroke="white" stroke-width="3.5" stroke-linecap="round" opacity="0.9"/>
-              <line x1={x} y1="58" x2={x + 12} y2="88" stroke="white" stroke-width="3.5" stroke-linecap="round" opacity="0.9"/>
-              <line x1={x - 12} y1="88" x2={x - 18} y2="88" stroke="white" stroke-width="3" stroke-linecap="round" opacity="0.8"/>
-              <line x1={x + 12} y1="88" x2={x + 18} y2="88" stroke="white" stroke-width="3" stroke-linecap="round" opacity="0.8"/>
+              <line x1={x-16} y1="32" x2={x} y2="28" stroke="white" stroke-width="3" stroke-linecap="round" opacity="0.9"/>
+              <line x1={x} y1="28" x2={x+16} y2="32" stroke="white" stroke-width="3" stroke-linecap="round" opacity="0.9"/>
+              <line x1={x} y1="58" x2={x-12} y2="88" stroke="white" stroke-width="3.5" stroke-linecap="round" opacity="0.9"/>
+              <line x1={x} y1="58" x2={x+12} y2="88" stroke="white" stroke-width="3.5" stroke-linecap="round" opacity="0.9"/>
+              <line x1={x-12} y1="88" x2={x-18} y2="88" stroke="white" stroke-width="3" stroke-linecap="round" opacity="0.8"/>
+              <line x1={x+12} y1="88" x2={x+18} y2="88" stroke="white" stroke-width="3" stroke-linecap="round" opacity="0.8"/>
             {/each}
           </svg>
         </div>
@@ -153,19 +153,14 @@
         <div class="section-label">Overview</div>
 
         <div class="infographic" style="background:{goal.gradient ?? goal.color}; color:{goal.textColor}">
-
-          <!-- Header -->
           <div class="info-header">
             <img src="/goals_wheel.svg" alt="Goals" style="width:44px;height:44px;"/>
             <span class="info-report">LIVING WAY RECORD 2026</span>
             <div class="info-corner"></div>
           </div>
 
-          <!-- Main SVG: circle of dots + centered text -->
           <div class="info-body">
             <svg viewBox="0 0 500 440" width="100%" style="max-width:860px; display:block;" xmlns="http://www.w3.org/2000/svg">
-
-              <!-- 16 goal dots -->
               {#each Array(16) as _, i}
                 {@const angle = (i * 360/16 - 90) * Math.PI / 180}
                 {@const r = 200}
@@ -178,53 +173,22 @@
                     stroke-width={i === parseInt(id) - 1 ? '4' : '1'}
                     opacity={i === parseInt(id) - 1 ? '1' : '0.8'}
                   />
-                  <text x={cx} y={cy + 5} text-anchor="middle" font-size="12" font-weight="800"
+                  <text x={cx} y={cy+5} text-anchor="middle" font-size="12" font-weight="800"
                     fill={i === parseInt(id) - 1 ? goal.color : 'rgba(255,255,255,0.95)'}
-                    font-family="sans-serif" style="pointer-events:none">{i + 1}</text>
+                    font-family="sans-serif" style="pointer-events:none">{i+1}</text>
                 </a>
               {/each}
 
-              <!-- Line 1 -->
-              <text x="250" y="120" text-anchor="middle"
-                font-family="Koulen, sans-serif" font-size="20" fill="white">
-                {lines[0]}
-              </text>
-
-              <!-- Line 2 -->
-              <text x="250" y="165" text-anchor="middle"
-                font-family="Koulen, sans-serif" font-size="20" fill="white" >
-                {lines[1]}
-              </text>
-
-              <!-- Line 3 — red box -->
-              <rect x="60" y="185" width="380" height="52" fill="#c0392b" rx="2"/>
-              <text x="250" y="220" text-anchor="middle"
-                font-family="Koulen, sans-serif" font-size="20" fill="white">
-                {lines[2]}
-              </text>
-
-              <!-- Line 4 -->
-              <text x="250" y="278" text-anchor="middle"
-                font-family="Koulen, sans-serif" font-size="20" fill="white" >
-                {lines[3]}
-              </text>
-
-              <!-- Line 5 -->
-              <text x="250" y="322" text-anchor="middle"
-                font-family="Koulen, sans-serif" font-size="20" fill="white">
-                {lines[4]}
-              </text>
-
-              <!-- Bottom label -->
-              <text x="250" y="400" text-anchor="middle"
-                font-family="Cinzel, serif" font-size="11" fill="white" letter-spacing="5" opacity="0.5">
-                CIRCLE OF LIVING SOULS
-              </text>
-
+              <text x="250" y="120" text-anchor="middle" font-family="Koulen, sans-serif" font-size="28" fill="white" letter-spacing="2">{lines[0]}</text>
+              <text x="250" y="162" text-anchor="middle" font-family="Koulen, sans-serif" font-size="32" fill="white" letter-spacing="2">{lines[1]}</text>
+              <rect x="55" y="180" width="390" height="54" fill="#c0392b" rx="2"/>
+              <text x="250" y="216" text-anchor="middle" font-family="Koulen, sans-serif" font-size="28" fill="white" letter-spacing="2">{lines[2]}</text>
+              <text x="250" y="275" text-anchor="middle" font-family="Koulen, sans-serif" font-size="26" fill="white" letter-spacing="1">{lines[3]}</text>
+              <text x="250" y="320" text-anchor="middle" font-family="Koulen, sans-serif" font-size="32" fill="white" letter-spacing="2">{lines[4]}</text>
+              <text x="250" y="400" text-anchor="middle" font-family="Cinzel, serif" font-size="11" fill="white" letter-spacing="5" opacity="0.5">CIRCLE OF LIVING SOULS</text>
             </svg>
           </div>
 
-          <!-- Footer -->
           <div class="info-footer">
             <div class="info-footer-left">
               <span class="info-goal-num">{goal.id}</span>
@@ -352,18 +316,35 @@
   .hero-bg { position: absolute; inset: 0; z-index: 0; }
   .hero-bg::after { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 80% 50%, rgba(255,255,255,0.08) 0%, transparent 70%); }
   .hero-inner { position: relative; z-index: 1; max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
-  .hero-nav { display: flex; justify-content: space-between; align-items: center; padding: 1.25rem 0; flex-wrap: wrap; gap: 0.5rem; }
-  .hero-nav-right { display: flex; gap: 0.5rem; }
+  .hero-nav { display: flex; align-items: center; padding: 1.25rem 0; }
   .nav-pill { font-family: sans-serif; font-size: 0.72rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: var(--c2); border: 1px solid rgba(255,255,255,0.3); padding: 0.35rem 0.9rem; text-decoration: none; transition: background 0.15s; }
   .nav-pill:hover { background: rgba(255,255,255,0.2); color: #fff; }
   .goal-badge { font-family: 'Cinzel', serif; font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--c2); opacity: 0.75; margin-bottom: 0.75rem; }
-  .hero-content { padding: 1rem 0 3rem; max-width: 60%; }
-  .hero-content h1 { font-family: sans-serif; font-size: clamp(1.4rem, 3.5vw, 2.4rem); font-weight: 700; color: #fff; line-height: 1.15; margin-bottom: 0.75rem; }
+  .hero-content { padding: 0.5rem 0 3rem; max-width: 65%; }
+  .hero-content h1 { font-family: Koulen; font-size: clamp(1.4rem, 3.5vw, 2.4rem); font-weight: 500; color: #fff; line-height: 1.15; margin-bottom: 0.75rem; }
   .title-bar { width: 48px; height: 4px; background: #fff; opacity: 0.7; margin-bottom: 1.25rem; border-radius: 2px; }
-  .hero-summary { font-family: sans-serif; font-size: 0.95rem; color: var(--c2); line-height: 1.7; opacity: 0.9; }
+  .hero-summary { font-family: sans-serif; font-size: 0.95rem; color: var(--c2); line-height: 1.7; opacity: 0.9; margin-bottom: 1.5rem; }
+
+  .next-btn {
+    display: inline-block;
+    font-family: sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--c2);
+    text-decoration: none;
+    opacity: 0.75;
+    transition: opacity 0.2s;
+  }
+  .next-btn:hover { opacity: 1; color: #fff; }
+
   .hero-figures {
-    position: absolute; right: 0; bottom: 0;
-    opacity: 0.55; pointer-events: none;
+    position: absolute;
+    right: 2rem;
+    bottom: 1rem;
+    opacity: 0.45;
+    pointer-events: none;
     mask-image: linear-gradient(to left, rgba(255,255,255,1) 30%, rgba(255,255,255,0) 100%);
     -webkit-mask-image: linear-gradient(to left, rgba(255,255,255,1) 30%, rgba(255,255,255,0) 100%);
   }
@@ -388,7 +369,6 @@
   .info-goal-name { font-family: 'Koulen', sans-serif; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.06em; opacity: 0.85; line-height: 1.3; }
   .info-goal-sub { font-family: sans-serif; font-size: 0.5rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.6; margin-top: 0.1rem; }
   .info-footer-right { display: flex; flex-direction: column; align-items: flex-end; font-family: 'Koulen', sans-serif; font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; gap: 0.2rem; }
-  .goals-circle a { cursor: pointer; }
 
   /* ── Under poster ── */
   .under-poster { display: grid; grid-template-columns: 3fr 2fr; gap: 3rem; margin-top: 3rem; width: 100%; max-width: 860px; align-items: start; }
@@ -457,6 +437,5 @@
     .hero-inner { padding: 0 1rem; }
     .related-grid { grid-template-columns: 1fr; }
     .bottom-nav { flex-direction: column; }
-    .hero-nav { flex-direction: column; align-items: flex-start; }
   }
 </style>
