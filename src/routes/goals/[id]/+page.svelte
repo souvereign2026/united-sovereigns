@@ -68,31 +68,31 @@
   );
 
   const news = {
-    '1':  [
-      { date: '2025-03', title: 'Soul-to-soul exchange grows 40% in Southeast Asia', source: 'Open Exchange Review' },
-      { date: '2025-01', title: 'New tally protocols remove extractive layers in 12 solvens', source: 'Living Way Journal' },
+    '1': [
+      { date: '2025-03', title: 'Soul-to-soul exchange grows 40% in Southeast Asia', source: 'Open Exchange Review', pdf: null },
+      { date: '2025-01', title: 'Old books that shows some realities but wont give you full answers', source: 'Living In The Private', pdf: '/docs/Living-In-The-Private.pdf' },
     ],
-    '2':  [
-      { date: '2025-03', title: 'Solvens reporting full vitality on clean food and water alone', source: 'Living Way Journal' },
-      { date: '2025-01', title: 'Chronic illness rates fall in solvens adopting clean living', source: 'Circle Quarterly' },
+    '2': [
+      { date: '2025-03', title: 'Solvens reporting full vitality on clean food and water alone', source: 'Living Way Journal', pdf: null },
+      { date: '2025-01', title: 'Chronic illness rates fall in solvens adopting clean living', source: 'Circle Quarterly', pdf: null },
     ],
-    '3':  [
-      { date: '2025-02', title: 'Open ledger trial launches in three solvens', source: 'Circle Report' },
-      { date: '2024-11', title: 'Living tally systems reduce dispute rates by 60%', source: 'Circle Quarterly' },
+    '3': [
+      { date: '2025-02', title: 'Open ledger trial launches in three solvens', source: 'Circle Report', pdf: null },
+      { date: '2024-11', title: 'Living tally systems reduce dispute rates by 60%', source: 'Circle Quarterly', pdf: null },
     ],
-    '6':  [
-      { date: '2025-03', title: 'Aquaponics systems double yields in dry regions', source: 'Soil & Water Journal' },
-      { date: '2025-01', title: 'Regenerative growing shows 30% topsoil increase over 5 years', source: 'Living Soil Review' },
+    '6': [
+      { date: '2025-03', title: 'Aquaponics systems double yields in dry regions', source: 'Soil & Water Journal', pdf: null },
+      { date: '2025-01', title: 'Regenerative growing shows 30% topsoil increase over 5 years', source: 'Living Soil Review', pdf: null },
     ],
     '10': [
-      { date: '2025-02', title: 'Open Archive adds 2,000 rare writings', source: 'Archive Bulletin' },
-      { date: '2024-12', title: 'Open knowing network reaches 50,000 living souls', source: 'Knowing Circle' },
+      { date: '2025-02', title: 'Open Archive adds 2,000 rare writings', source: 'Archive Bulletin', pdf: null },
+      { date: '2024-12', title: 'Open knowing network reaches 50,000 living souls', source: 'Knowing Circle', pdf: null },
     ],
   };
 
   let goalNews = $derived(news[id] ?? [
-    { date: '2025-03', title: `${goal?.title} — circle report published`, source: 'Living Way Journal' },
-    { date: '2025-01', title: `Progress on ${goal?.title} across 8 regions`, source: 'Circle Quarterly' },
+    { date: '2025-03', title: `${goal?.title} — circle report published`, source: 'Living Way Journal', pdf: null },
+    { date: '2025-01', title: `Progress on ${goal?.title} across 8 regions`, source: 'Circle Quarterly', pdf: null },
   ]);
 
   const goalColors = ['#0f7a5a','#32085a','#7a2e00','#0d1f5c','#5c0a0a','#1a3a08','#5c2800','#053a52','#051e3e','#083020','#4a2e00','#2a1500','#083030','#301800','#0a0a3a','#282800'];
@@ -124,10 +124,8 @@
           <h1>{goal.title}</h1>
           <div class="title-bar"></div>
           <p class="hero-summary">{goal.summary}</p>
-<a href="/goals/{nextGoal().id}" class="next-btn">Next →</a>
+          <a href="/goals/{nextGoal().id}" class="next-btn">Next →</a>
         </div>
-
-        <!-- Figures: 3x smaller -->
         <div class="hero-figures">
           <svg viewBox="0 0 360 110" width="140" height="44" xmlns="http://www.w3.org/2000/svg">
             {#each [40, 90, 140, 180, 220, 270, 320] as x}
@@ -177,7 +175,6 @@
                     font-family="sans-serif" style="pointer-events:none">{i+1}</text>
                 </a>
               {/each}
-
               <text x="250" y="120" text-anchor="middle" font-family="Koulen, sans-serif" font-size="28" fill="white" letter-spacing="2">{lines[0]}</text>
               <text x="250" y="162" text-anchor="middle" font-family="Koulen, sans-serif" font-size="32" fill="white" letter-spacing="2">{lines[1]}</text>
               <rect x="55" y="180" width="390" height="54" fill="#c0392b" rx="2"/>
@@ -272,6 +269,7 @@
             </div>
           {/if}
         </div>
+
         <div class="col">
           <div class="section-label">News & Updates</div>
           <div class="news-list">
@@ -281,6 +279,9 @@
                 <div class="news-body">
                   <p class="news-title">{item.title}</p>
                   <p class="news-source">{item.source}</p>
+                  {#if item.pdf}
+                    <a href={item.pdf} target="_blank" class="news-pdf">↗ Read PDF</a>
+                  {/if}
                 </div>
                 <div class="news-bar" style="background:{goal.color}"></div>
               </div>
@@ -316,44 +317,21 @@
   .hero-bg::after { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 80% 50%, rgba(255,255,255,0.08) 0%, transparent 70%); }
   .hero-inner { position: relative; z-index: 1; max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
   .hero-nav { display: flex; align-items: center; padding: 1.25rem 0; }
-  .nav-pill {    font-family: Koulen;    font-size: 0.72rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: var(--c2); border: 1px solid rgba(255,255,255,0.3); padding: 0.35rem 0.9rem; text-decoration: none; transition: background 0.15s; }
+  .nav-pill { font-family: Koulen; font-size: 0.72rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: var(--c2); border: 1px solid rgba(255,255,255,0.3); padding: 0.35rem 0.9rem; text-decoration: none; transition: background 0.15s; }
   .nav-pill:hover { background: rgba(255,255,255,0.2); color: #fff; }
-  .goal-badge { 
-        font-family: Koulen; font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--c2); opacity: 0.75; margin-bottom: 0.75rem; }
+  .goal-badge { font-family: Koulen; font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--c2); opacity: 0.75; margin-bottom: 0.75rem; }
   .hero-content { padding: 0.5rem 0 3rem; max-width: 65%; }
   .hero-content h1 { font-family: Koulen; font-size: clamp(1.4rem, 3.5vw, 2.4rem); font-weight: 500; color: #fff; line-height: 1.15; margin-bottom: 0.75rem; }
   .title-bar { width: 48px; height: 4px; background: #fff; opacity: 0.7; margin-bottom: 1.25rem; border-radius: 2px; }
-  .hero-summary { font-family: sans-serif; font-size: 0.95rem; color: var(--c2); line-height: 1.7; opacity: 0.9; margin-bottom: 1.5rem; }
-
-  .next-btn {
-    display: inline-block;
-       font-family: Koulen;
-    font-size: 0.8rem;
-    font-weight: 700;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: var(--c2);
-    text-decoration: none;
-    opacity: 0.75;
-    transition: opacity 0.2s;
-  }
+  .hero-summary { font-family: Koulen; font-size: 0.95rem; color: var(--c2); line-height: 1.7; opacity: 0.9; margin-bottom: 1.5rem; }
+  .next-btn { display: inline-block; font-family: Koulen; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--c2); text-decoration: none; opacity: 0.75; transition: opacity 0.2s; }
   .next-btn:hover { opacity: 1; color: #fff; }
-
-  .hero-figures {
-    position: absolute;
-    right: 2rem;
-    bottom: 1rem;
-    opacity: 0.45;
-    pointer-events: none;
-    mask-image: linear-gradient(to left, rgba(255,255,255,1) 30%, rgba(255,255,255,0) 100%);
-    -webkit-mask-image: linear-gradient(to left, rgba(255,255,255,1) 30%, rgba(255,255,255,0) 100%);
-  }
+  .hero-figures { position: absolute; right: 2rem; bottom: 1rem; opacity: 0.45; pointer-events: none; mask-image: linear-gradient(to left, rgba(255,255,255,1) 30%, rgba(255,255,255,0) 100%); -webkit-mask-image: linear-gradient(to left, rgba(255,255,255,1) 30%, rgba(255,255,255,0) 100%); }
 
   /* ── Sections ── */
   .section { padding: 3.5rem 2rem; border-bottom: 1px solid #eee; }
   .section-inner { max-width: 1100px; margin: 0 auto; }
-  .section-label {     font-family: Koulen;
- font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: #999; margin-bottom: 1.75rem; padding-bottom: 0.6rem; border-bottom: 1px solid #eee; }
+  .section-label { font-family: Koulen; font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: #999; margin-bottom: 1.75rem; padding-bottom: 0.6rem; border-bottom: 1px solid #eee; }
 
   /* ── Poster ── */
   .poster-section { background: #f0f0f0; }
@@ -361,34 +339,27 @@
   .poster-inner .section-label { align-self: flex-start; width: 100%; }
   .infographic { border-radius: 20px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.25); display: flex; flex-direction: column; width: 100%; max-width: 860px; }
   .info-header { display: flex; align-items: center; gap: 0.75rem; padding: 1rem 1.5rem; background: rgba(0,0,0,0.2); position: relative; }
-  .info-report { font-family: 'Koulen', sans-serif; font-size: 1rem; letter-spacing: 0.1em; opacity: 0.9; }
+  .info-report { font-family: Koulen; font-size: 1rem; letter-spacing: 0.1em; opacity: 0.9; }
   .info-corner { position: absolute; top: 0; right: 0; width: 70px; height: 70px; background: rgba(255,255,255,0.15); clip-path: polygon(100% 0, 0 0, 100% 100%); }
   .info-body { display: flex; justify-content: center; align-items: center; padding: 1rem; width: 100%; }
   .info-footer { background: rgba(0,0,0,0.3); padding: 1rem 1.5rem; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
   .info-footer-left { display: flex; align-items: center; gap: 0.75rem; }
-  .info-goal-num { font-family: 'Koulen', sans-serif; font-size: 1.8rem; opacity: 0.9; }
-  .info-goal-name { font-family: 'Koulen', sans-serif; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.06em; opacity: 0.85; line-height: 1.3; }
-  .info-goal-sub {     font-family: Koulen;    font-size: 0.5rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.6; margin-top: 0.1rem; }
-  .info-footer-right { display: flex; flex-direction: column; align-items: flex-end; font-family: 'Koulen', sans-serif; font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; gap: 0.2rem; }
+  .info-goal-num { font-family: Koulen; font-size: 1.8rem; opacity: 0.9; }
+  .info-goal-name { font-family: Koulen; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.06em; opacity: 0.85; line-height: 1.3; }
+  .info-goal-sub { font-family: Koulen; font-size: 0.5rem; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.6; margin-top: 0.1rem; }
+  .info-footer-right { display: flex; flex-direction: column; align-items: flex-end; font-family: Koulen; font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; gap: 0.2rem; }
 
   /* ── Under poster ── */
   .under-poster { display: grid; grid-template-columns: 3fr 2fr; gap: 3rem; margin-top: 3rem; width: 100%; max-width: 860px; align-items: start; }
-  .up-num {     font-family: Koulen;
- serif; font-size: 5rem; font-weight: 600; line-height: 1; opacity: 0.2; margin-bottom: 0.5rem; }
-  .up-title {     font-family: Koulen;
- font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 900; color: #111; line-height: 1.2; margin-bottom: 0.75rem; }
-  .up-summary {     font-family: Koulen;
- font-size: 1rem; color: #555; line-height: 1.7; margin-bottom: 1rem; font-style: italic; }
-  .up-desc {    font-family: Koulen;
-font-size: 0.92rem; color: #444; line-height: 1.9; }
-  .up-label {     font-family: Koulen;
- font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: #999; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid #eee; }
+  .up-num { font-family: Koulen; font-size: 5rem; line-height: 1; opacity: 0.2; margin-bottom: 0.5rem; }
+  .up-title { font-family: Koulen; font-size: clamp(1.4rem, 3vw, 2rem); color: #111; line-height: 1.2; margin-bottom: 0.75rem; }
+  .up-summary { font-family: Koulen; font-size: 1rem; color: #555; line-height: 1.7; margin-bottom: 1rem; }
+  .up-desc { font-family: Koulen; font-size: 0.92rem; color: #444; line-height: 1.9; }
+  .up-label { font-family: Koulen; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.15em; color: #999; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid #eee; }
   .up-list { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; }
-  .up-list li {     font-family: Koulen;
- font-size: 0.88rem; font-weight: 600; color: #222; display: flex; align-items: center; gap: 0.75rem; line-height: 1.4; }
+  .up-list li { font-family: Koulen; font-size: 0.88rem; color: #222; display: flex; align-items: center; gap: 0.75rem; line-height: 1.4; }
   .up-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
-  .poster-caption {     font-family: Koulen;
-font-size: 0.7rem; color: #aaa; margin-top: 1.5rem; letter-spacing: 0.05em; align-self: flex-start; }
+  .poster-caption { font-family: Koulen; font-size: 0.7rem; color: #aaa; margin-top: 1.5rem; letter-spacing: 0.05em; align-self: flex-start; }
 
   /* ── Related ── */
   .related-section { background: #fafafa; }
@@ -397,8 +368,7 @@ font-size: 0.7rem; color: #aaa; margin-top: 1.5rem; letter-spacing: 0.05em; alig
   .related-tile::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, transparent 60%); }
   .related-tile:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.2); }
   .related-num { font-family: 'Cinzel', serif; font-size: 0.7rem; opacity: 0.6; }
-  .related-title {     font-family: Koulen;
-font-size: 0.85rem; font-weight: 700; line-height: 1.3; }
+  .related-title { font-family: Koulen; font-size: 0.85rem; line-height: 1.3; }
   .related-arrow { font-size: 0.85rem; margin-top: 0.5rem; opacity: 0.6; }
 
   /* ── Records + News ── */
@@ -406,34 +376,34 @@ font-size: 0.85rem; font-weight: 700; line-height: 1.3; }
   .pub-list { display: flex; flex-direction: column; gap: 1rem; }
   .pub-item { display: flex; gap: 1rem; align-items: flex-start; padding: 1rem; background: #fafafa; border: 1px solid #eee; border-radius: 6px; }
   .pub-icon { width: 36px; height: 36px; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 0.9rem; color: #fff; flex-shrink: 0; }
-  .pub-title {     font-family: Koulen;
- font-size: 0.85rem; font-weight: 700; color: #111; margin-bottom: 0.2rem; }
-  .pub-meta {     font-family: Koulen;
-font-size: 0.72rem; color: #999; margin-bottom: 0.6rem; }
+  .pub-title { font-family: Koulen; font-size: 0.85rem; color: #111; margin-bottom: 0.2rem; }
+  .pub-meta { font-family: Koulen; font-size: 0.72rem; color: #999; margin-bottom: 0.6rem; }
   .pub-actions { display: flex; gap: 0.5rem; }
-  .pub-btn-read, .pub-btn-dl { font-family: sans-serif; font-size: 0.7rem; font-weight: 600; padding: 0.25rem 0.7rem; border-radius: 999px; text-decoration: none; transition: all 0.15s; }
+  .pub-btn-read, .pub-btn-dl { font-family: Koulen; font-size: 0.7rem; padding: 0.25rem 0.7rem; border-radius: 999px; text-decoration: none; transition: all 0.15s; }
   .pub-btn-read { background: #009edb; color: #fff; }
   .pub-btn-read:hover { background: #007bb5; color: #fff; }
   .pub-btn-dl { border: 1px solid #ccc; color: #555; }
   .pub-btn-dl:hover { border-color: #009edb; color: #009edb; }
   .empty-pubs { padding: 2rem; background: #fafafa; border: 1px dashed #ddd; border-radius: 6px; text-align: center; }
-  .empty-pubs p { font-family: sans-serif; font-size: 0.85rem; color: #999; margin-bottom: 0.75rem; }
-  .upload-link { font-family: sans-serif; font-size: 0.82rem; font-weight: 600; text-decoration: none; }
+  .empty-pubs p { font-family: Koulen; font-size: 0.85rem; color: #999; margin-bottom: 0.75rem; }
+  .upload-link { font-family: Koulen; font-size: 0.82rem; text-decoration: none; }
   .news-list { display: flex; flex-direction: column; }
   .news-item { display: flex; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid #eee; position: relative; }
   .news-bar { position: absolute; left: 0; top: 0; bottom: 0; width: 3px; border-radius: 2px; opacity: 0; transition: opacity 0.2s; }
   .news-item:hover .news-bar { opacity: 1; }
   .news-date { font-family: 'Cinzel', serif; font-size: 0.65rem; color: #aaa; white-space: nowrap; padding-top: 0.15rem; width: 60px; flex-shrink: 0; }
-  .news-title { font-family: sans-serif; font-size: 0.85rem; font-weight: 600; color: #222; line-height: 1.4; margin-bottom: 0.2rem; }
-  .news-source { font-family: sans-serif; font-size: 0.7rem; color: #aaa; font-style: italic; }
+  .news-title { font-family: Koulen; font-size: 0.95rem; color: #222; line-height: 1.4; margin-bottom: 0.2rem; }
+  .news-source { font-family: Koulen; font-size: 0.75rem; color: #aaa; }
+  .news-pdf { font-family: Koulen; font-size: 0.75rem; color: #009edb; text-decoration: none; display: inline-block; margin-top: 0.35rem; letter-spacing: 0.05em; }
+  .news-pdf:hover { text-decoration: underline; }
 
   /* ── Bottom nav ── */
   .bottom-nav { display: flex; align-items: center; justify-content: center; gap: 1rem; padding: 2.5rem 2rem; background: #fafafa; border-top: 1px solid #eee; flex-wrap: wrap; }
-  .bottom-btn { font-family: sans-serif; font-size: 0.78rem; font-weight: 600; padding: 0.6rem 1.25rem; border-radius: 999px; border: 2px solid; text-decoration: none; transition: opacity 0.15s; }
+  .bottom-btn { font-family: Koulen; font-size: 0.78rem; padding: 0.6rem 1.25rem; border-radius: 999px; border: 2px solid; text-decoration: none; transition: opacity 0.15s; }
   .bottom-btn:hover { opacity: 0.7; }
-  .bottom-btn-center { font-family: sans-serif; font-size: 0.78rem; font-weight: 700; padding: 0.6rem 1.5rem; border-radius: 999px; color: #fff; text-decoration: none; transition: opacity 0.15s; }
+  .bottom-btn-center { font-family: Koulen; font-size: 0.78rem; padding: 0.6rem 1.5rem; border-radius: 999px; color: #fff; text-decoration: none; transition: opacity 0.15s; }
   .bottom-btn-center:hover { opacity: 0.85; color: #fff; }
-  .not-found { padding: 5rem; text-align: center; font-family: sans-serif; color: #888; background: #fff; min-height: 100vh; }
+  .not-found { padding: 5rem; text-align: center; font-family: Koulen; color: #888; background: #fff; min-height: 100vh; }
 
   /* ── Responsive ── */
   @media (max-width: 900px) {
