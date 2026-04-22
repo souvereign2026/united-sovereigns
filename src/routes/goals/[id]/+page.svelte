@@ -17,10 +17,10 @@
   });
 
   const features = {
-    '1':  ['Soul-to-soul touch', 'No broker or gatekeeper', 'Full accord between parties', 'Removal of extractive layers'],
+    '1':  ['Soul-to-soul touch', 'Full responsibility', 'Full trust between each other', 'Occam/ms razor - only what is necessary exists'],
     '2':  ['The living body is whole by nature', 'The living body knows its own restoration', 'The living body restores itself when given what it needs', 'The living body thrives on clean food, clean water, clean air'],
     '3':  ['Open ledgers for all', 'Open record of decisions', 'Transparent value exchange', 'Open ledger that no soul can alter alone'],
-    '4':  ['The knowledge to raise a roof belongs to all', 'Circle infrastructure', 'No prohibitive permitting', 'Self-determined construction'],
+    '4':  ['The knowledge to raise a roof belongs to all', 'Built together, held by all', 'Self-determined construction'],
     '5':  ['Circle energy access', 'Wind, water, and biomass', 'Decentralised power grids', 'No energy monopolies'],
     '6':  ['Soil regeneration', 'Biological growing', 'Composting and aquaponics', 'Topsoil preservation'],
     '7':  ['Food as the land grew it — nothing added', 'Honest provenance', 'Growing and sharing is the living way', 'Sacred shared meals'],
@@ -36,13 +36,13 @@
   };
 
   const centerTexts = {
-    '1':  ['EVERY LIVING MAN AND WOMAN IS', 'BORN A SOVEREIGN.', 'THEY CARRY THIS KNOWING', 'INTO EVERY ACT, EVERY EXCHANGE,', 'EVERY DAY.'],
+    '1':  ['EVERY LIVING MEN AND WOMEN IS', 'BORN A SOVEREIGN.', 'THEY CARRY THIS KNOWING', 'INTO EVERY ACT, EVERY EXCHANGE,', 'EVERY DAY.'],
     '2':  ['THE BODY KNOWS', 'HOW TO HEAL ITSELF.', 'CLEAN FOOD. CLEAN WATER.', 'CLEAN AIR.', 'THAT IS ALL.'],
-    '3':  ['EVERY EXCHANGE', 'SEEN BY ALL.', 'NOTHING HIDDEN.', 'NO MASTER', 'OF THE RECORD.'],
-    '4':  ['YOUR HANDS.', 'YOUR LAND.', 'YOUR ROOF.', 'BUILT FREE,', 'OWNED FREE.'],
-    '5':  ['FIRE THAT MOVES', 'WITHOUT POISON.', 'POWER THAT BELONGS', 'TO THE CIRCLE,', 'NOT THE COMPANY.'],
+    '3':  ['EVERY EXCHANGE', 'SEEN BY ALL.', 'NOTHING HIDDEN.', 'WE CONTROL', 'ALL THE RECORDS.'],
+    '4':  ['YOUR HANDS.', 'YOUR LAND.', 'YOUR ROOF.', 'BUILT BY WILL,', 'YOURS ENTIRELY'],
+    '5':  ['FIRE THAT MOVES', 'WITHOUT POISON.', 'POWER THAT BELONGS', 'TO THE CIRCLE,', 'to solvens.'],
     '6':  ['FEED THE EARTH FIRST.', 'IT FEEDS YOU', 'FOREVER.', 'LIVING SOIL.', 'LIVING PEOPLE.'],
-    '7':  ['EAT WHAT THE LAND MADE.', 'NOTHING ADDED.', 'NOTHING TAKEN.', 'THE TABLE IS', 'SACRED.'],
+    '7':  ['progress', 'in understanding', 'food purity (2026-2030)','synthetic preservatives', 'have disappeared'],
     '8':  ['WATER REMEMBERS', 'HOW TO HEAL.', 'LET IT FLOW FREE.', 'NO WALL.', 'NO PRICE.'],
     '9':  ['THE SKY IS THE MEASURE.', 'MAKE IT BLUE AGAIN.', 'WHAT ENTERS THE AIR', 'ENTERS EVERY', 'LUNG.'],
     '10': ['WHAT WAS BURIED', 'BELONGS TO ALL.', 'OPEN THE ARCHIVE.', 'LET EVERY SOUL', 'READ.'],
@@ -157,7 +157,7 @@
           </div>
 
           <div class="info-body">
-            <svg viewBox="0 0 500 440" width="100%" style="max-width:860px; display:block;" xmlns="http://www.w3.org/2000/svg">
+            <svg viewBox="0 0 500 440" width="100%" style="max-width:660px; display:block;" xmlns="http://www.w3.org/2000/svg">
               {#each Array(16) as _, i}
                 {@const angle = (i * 360/16 - 90) * Math.PI / 180}
                 {@const r = 200}
@@ -176,11 +176,11 @@
                 </a>
               {/each}
               <text x="250" y="120" text-anchor="middle" font-family="Koulen, sans-serif" font-size="28" fill="white" letter-spacing="2">{lines[0]}</text>
-              <text x="250" y="162" text-anchor="middle" font-family="Koulen, sans-serif" font-size="32" fill="white" letter-spacing="2">{lines[1]}</text>
-              <rect x="55" y="180" width="390" height="54" fill="#c0392b" rx="2"/>
+              <text x="250" y="162" text-anchor="middle" font-family="Koulen, sans-serif" font-size="28" fill="white" letter-spacing="2">{lines[1]}</text>
+              <rect x="80" y="180" width="330" height="54" fill="#c0392b" rx="2"/>
               <text x="250" y="216" text-anchor="middle" font-family="Koulen, sans-serif" font-size="28" fill="white" letter-spacing="2">{lines[2]}</text>
-              <text x="250" y="275" text-anchor="middle" font-family="Koulen, sans-serif" font-size="26" fill="white" letter-spacing="1">{lines[3]}</text>
-              <text x="250" y="320" text-anchor="middle" font-family="Koulen, sans-serif" font-size="32" fill="white" letter-spacing="2">{lines[4]}</text>
+              <text x="250" y="275" text-anchor="middle" font-family="Koulen, sans-serif" font-size="28" fill="white" letter-spacing="1">{lines[3]}</text>
+              <text x="250" y="320" text-anchor="middle" font-family="Koulen, sans-serif" font-size="28" fill="white" letter-spacing="2">{lines[4]}</text>
               <text x="250" y="400" text-anchor="middle" font-family="Cinzel, serif" font-size="11" fill="white" letter-spacing="5" opacity="0.5">CIRCLE OF LIVING SOULS</text>
             </svg>
           </div>
@@ -317,9 +317,9 @@
   .hero-bg::after { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 80% 50%, rgba(255,255,255,0.08) 0%, transparent 70%); }
   .hero-inner { position: relative; z-index: 1; max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
   .hero-nav { display: flex; align-items: center; padding: 1.25rem 0; }
-  .nav-pill { font-family: Koulen; font-size: 0.72rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: var(--c2); border: 1px solid rgba(255,255,255,0.3); padding: 0.35rem 0.9rem; text-decoration: none; transition: background 0.15s; }
+  .nav-pill { font-family: Koulen; font-size: 0.72rem; font-weight: 800; letter-spacing: 0.06em; color: var(--c2); border: 1px solid rgba(255,255,255,0.3); padding: 0.35rem 0.9rem; text-decoration: none; transition: background 0.15s; }
   .nav-pill:hover { background: rgba(255,255,255,0.2); color: #fff; }
-  .goal-badge { font-family: Koulen; font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--c2); opacity: 0.75; margin-bottom: 0.75rem; }
+  .goal-badge { font-family: Koulen; font-size: 0.72rem; letter-spacing: 0.2em; color: var(--c2); opacity: 0.75; margin-bottom: 0.75rem; }
   .hero-content { padding: 0.5rem 0 3rem; max-width: 65%; }
   .hero-content h1 { font-family: Koulen; font-size: clamp(1.4rem, 3.5vw, 2.4rem); font-weight: 500; color: #fff; line-height: 1.15; margin-bottom: 0.75rem; }
   .title-bar { width: 48px; height: 4px; background: #fff; opacity: 0.7; margin-bottom: 1.25rem; border-radius: 2px; }
