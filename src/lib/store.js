@@ -13,10 +13,10 @@ function loadDocs() {
 function getSamples() {
   return [
     {
-      id: '1', title: 'Introduction to Distributed Systems', author: 'M. van Steen',
-      category: 'technical', description: 'Comprehensive overview of distributed computing, consistency models, and fault tolerance.',
-      size: '4.2 MB', pages: 318, date: '2024-11-15',
-      tags: ['networking', 'systems'], fileName: 'distributed-systems.pdf', fileData: null
+      id: '1', title: 'Introduction to Conspirators Ierarchy', author: 'Dr. John Coleman',
+      category: 'books', description: 'THE STORY OF THE COMMITTEE OF 300',
+      size: '851 KB', pages: 169, date: '2024-11-15',
+      tags: [ 'globalism', 'new-world-order'], fileName: 'CONSPIRATORS HIERARCHY_ THE STORY OF THE COMMITTEE OF 300.pdf', fileData: null
     },
     {
       id: '2', title: 'The Mutus Liber', author: 'Anonymous (1677)',
@@ -25,10 +25,10 @@ function getSamples() {
       tags: ['alchemy', 'hermetic', 'esoteric'], fileName: 'mutus-liber.pdf', fileData: null
     },
     {
-      id: '3', title: 'NixOS Manual', author: 'NixOS Contributors',
-      category: 'technical', description: 'Official reference for NixOS. Configuration, modules, package management, deployment.',
-      size: '2.1 MB', pages: 489, date: '2025-01-20',
-      tags: ['nixos', 'linux'], fileName: 'nixos-manual.pdf', fileData: null
+      id: '3', title: 'Living In The Private', author: 'Unknown',
+      category: 'books', description: 'Educate Yourself, Ask Questions, Verify Everything.',
+      size: '1.4 MB', pages: 489, date: '2025-01-20',
+      tags: ['privacy', 'jurisdiction'], fileName: 'nixos-manual.pdf', fileData: null
     }
   ];
 }

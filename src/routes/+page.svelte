@@ -46,7 +46,7 @@
     { num: '11', label: 'Living Teaching',       icon: '⚇', color: '#6a5a10' },
     { num: '12', label: 'Open Land',             icon: '⌂', color: '#3a2a0a' },
     { num: '13', label: 'The Circle',            icon: '✦', color: '#1a4a4a' },
-    { num: '14', label: 'Elder Bond',            icon: '≋', color: '#5a3a0a' },
+    { num: '14', label: 'getting to know each other', icon: '≋', color: '#5a3a0a' },
     { num: '15', label: 'The Way Spreads',       icon: '⊛', color: '#1a2a4e' },
     { num: '16', label: 'What Flourishes',       icon: '▐', color: '#3a4a0a' },
   ];
@@ -71,7 +71,7 @@
         Living knowledge, craft and discovery are the instruments by which living solvens advance the Living Way Goals — grounding action in what is true, hastening what is needed, and carrying proven answers to those who hold the greatest need.
       </p>
       <p>
-        On 6–7 May 2026, the eleventh annual Solven of Living Knowledge, Craft and Discovery for the Living Way Goals will be held under the roof of United Sovereigns in New York.
+        On 6–7 May 2026, the eleventh annual Solven of Living Knowledge, Craft and Discovery for the Living Way Goals will be held under the roof of United Sovereigns in Bangkok.
       </p>
       <div class="hero-actions">
         <a href="/docs/Agenda_Living_Way.pdf" target="_blank" class="btn-outline">↗ Read Agenda Living Way</a>
@@ -191,7 +191,7 @@
 <a href="/goals/14" class="tile t14">
   <span class="tile-num">14</span>
   <div class="tile-icon"><svg viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19 30 Q19 20 19 16" stroke="#D4A870" stroke-width="2" stroke-linecap="round"/><path d="M19 16 Q14 10 8 12" stroke="#D4A870" stroke-width="1.8" fill="none" stroke-linecap="round"/><path d="M19 16 Q24 10 30 12" stroke="#D4A870" stroke-width="1.8" fill="none" stroke-linecap="round"/><path d="M19 20 Q13 16 7 18" stroke="#D4A870" stroke-width="1.3" fill="none" stroke-linecap="round" opacity="0.7"/><path d="M19 20 Q25 16 31 18" stroke="#D4A870" stroke-width="1.3" fill="none" stroke-linecap="round" opacity="0.7"/><line x1="14" y1="30" x2="24" y2="30" stroke="#D4A870" stroke-width="1.5" stroke-linecap="round"/></svg></div>
-  <div class="tile-label">Elder Bond</div>
+  <div class="tile-label">Know each Other</div>
 </a>
 
 <a href="/goals/15" class="tile t15">
