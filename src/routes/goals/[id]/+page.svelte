@@ -101,10 +101,10 @@
       "Common cause as practice, not slogan",
     ],
     "15": [
-      "Growth by example",
-      "Open invitation only",
-      "Recording what works. Giving it openly.",
-      "No forced conversion",
+      "New words for what the old tongue cannot name honestly",
+      "Language grown from the circle, not imposed from above",
+      "Teaching the living tongue to the young",
+      "Old words will have only their true meaning",
     ],
     "16": [
       "Measure by what thrives",
@@ -1103,15 +1103,10 @@
           </div>
 
           <div class="info-body">
-            <svg
-              viewBox="0 0 500 440"
-              width="100%"
-              style="max-width:660px; display:block;"
-              xmlns="http://www.w3.org/2000/svg"
-            >
+          <svg viewBox="0 0 500 520" width="100%" style="max-width:860px; display:block;">
               {#each Array(16) as _, i}
                 {@const angle = (((i * 360) / 16 - 90) * Math.PI) / 180}
-                {@const r = 200}
+                {@const r = 190}
                 {@const cx = 250 + r * Math.cos(angle)}
                 {@const cy = 220 + r * Math.sin(angle)}
                 <a href="/goals/{i + 1}">
@@ -1195,12 +1190,12 @@
               >
               <text
                 x="250"
-                y="400"
+                y="450"
                 text-anchor="middle"
                 font-family="Cinzel, serif"
                 font-size="11"
                 fill="white"
-                letter-spacing="5"
+                letter-spacing="3"
                 opacity="0.5">CIRCLE OF LIVING SOULS</text
               >
             </svg>

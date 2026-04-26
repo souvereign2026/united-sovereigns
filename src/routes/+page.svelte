@@ -71,7 +71,7 @@
         Living knowledge, craft and discovery are the instruments by which living solvens advance the Living Way Goals — grounding action in what is true, hastening what is needed, and carrying proven answers to those who hold the greatest need.
       </p>
       <p>
-        On 6–7 May 2026, the eleventh annual Solven of Living Knowledge, Craft and Discovery for the Living Way Goals will be held under the roof of United Sovereigns in Bangkok.
+    These words are new and they are ours. Solven. Circle. Bond. Tally. The living way carries its own tongue — learn it here, carry it forward.
       </p>
       <div class="hero-actions">
         <a href="/docs/Agenda_Living_Way.pdf" target="_blank" class="btn-outline">↗ Read Agenda Living Way</a>
@@ -203,7 +203,7 @@
 <a href="/goals/16" class="tile t16">
   <span class="tile-num">16</span>
   <div class="tile-icon"><svg viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="6" y1="32" x2="6" y2="16" stroke="#D4D480" stroke-width="2" stroke-linecap="round"/><line x1="12" y1="32" x2="12" y2="10" stroke="#D4D480" stroke-width="2" stroke-linecap="round"/><line x1="18" y1="32" x2="18" y2="20" stroke="#D4D480" stroke-width="2" stroke-linecap="round"/><line x1="24" y1="32" x2="24" y2="14" stroke="#D4D480" stroke-width="2" stroke-linecap="round"/><line x1="30" y1="32" x2="30" y2="8" stroke="#D4D480" stroke-width="2" stroke-linecap="round"/><path d="M6 16 Q9 13 12 10 Q15 15 18 20 Q21 17 24 14 Q27 11 30 8" stroke="#D4D480" stroke-width="1.3" fill="none" stroke-linecap="round"/><circle cx="6" cy="16" r="1.8" fill="#D4D480"/><circle cx="12" cy="10" r="1.8" fill="#D4D480"/><circle cx="18" cy="20" r="1.8" fill="#D4D480"/><circle cx="24" cy="14" r="1.8" fill="#D4D480"/><circle cx="30" cy="8" r="1.8" fill="#D4D480"/><line x1="4" y1="32" x2="34" y2="32" stroke="#D4D480" stroke-width="1.2" stroke-linecap="round"/></svg></div>
-  <div class="tile-label">What Flourishes</div>
+  <div class="tile-label"> flourish of the living way</div>
 </a>
 
     </div>
