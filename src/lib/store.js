@@ -161,7 +161,7 @@ export const goals = [
     textColor: "#c8f080",
     summary: "Soil vitality as the foundation of all living systems.",
     description:
-      "Soil is not dirt. It is a living system of incomprehensible complexity — billions of organisms per handful, cycling nutrients, holding water, growing food, and anchoring ecosystems. Electroculture and permaculture, both suppressed by the agrochemical industry, restore this system without poison. Living Soil affirms that the care, regeneration, and protection of topsoil is a primary obligation of any solven that intends to persist. This goal covers composting, biological growing, aquaponics, food forest design, and all practices that build rather than deplete the living layer beneath our feet.",
+    "Imagine the world without chemical pesticides, herbicides and toxic fertilizers. Such world is real. all chronic intoxications will remain in the anals of history, in our new living circle the natural method will be used, without causing damage to the land around us. Our goal is to keep the soil clean and independent, and the genetics of the crops to become stronger, able to defend themselves naturally. a separate group of solvens who want to study this area of ​​​​knowledge unite, experiment, share knowledge and implement new ideas related to electroculture and permaculture.",
     docs: [],
   },
 

@@ -368,6 +368,51 @@
   let lines = $derived(
     centerTexts[id] ?? ["LIVING WAY", "GOAL " + id, "", "", ""],
   );
+
+  const goalVideos = {
+  "1": [
+    { id: '07rurm', title: 'Mental imprisonment explained' },
+  ],
+  "5": [
+    { id: 'TEgAjWfh5qI', title: 'Tiny Steam Engine', type: 'youtube'},
+  ],
+  "6": [
+    { id: 'HDwO0HBZhPI', title: 'Electroculture', type: 'youtube' },
+  ],
+  "7": [
+    { id: 'fwls2c', title: 'The Clean Table' },
+  ],
+  "8": [
+    { id: 'fwls2c', title: 'Sacred Water' },
+  ],
+  "9": [
+    { id: 'fwls2c', title: 'Blue Sky' },
+  ],
+  "10": [
+    { id: 'fwls2c', title: 'Open Archive' },
+  ],
+  "11": [
+    { id: 'fwls2c', title: 'Living Teaching' },
+  ],
+  "12": [
+    { id: 'fwls2c', title: 'Open Land' },
+  ],
+  "13": [
+    { id: 'fwls2c', title: 'The Circle' },
+  ],
+  "14": [
+    { id: 'fwls2c', title: 'Know Each Other' },
+  ],
+  "15": [
+    { id: 'fwls2c', title: 'The Way Spreads' },
+  ],
+  "16": [
+    { id: 'fwls2c', title: 'What Flourishes' },
+  ],
+};
+
+let videos = $derived(goalVideos[id] ?? []);
+
 </script>
 
 <svelte:head>
@@ -1273,6 +1318,40 @@
       </div>
     </section>
 
+  
+
+<!-- ── Videos ── -->
+{#if videos.length > 0}
+  <section class="section videos-section">
+    <div class="section-inner">
+      <div class="section-label">Related videos</div>
+      <div class="videos-grid">
+  {#each videos as video}
+  <div class="video-card">
+    <div class="video-wrap">
+      {#if video.type === 'youtube'}
+        <iframe
+          src="https://www.youtube.com/embed/{video.id}"
+          frameborder="0"
+          allowfullscreen
+          title={video.title}
+        ></iframe>
+      {:else}
+        <iframe
+          src="https://streamable.com/e/{video.id}"
+          frameborder="0"
+          allowfullscreen
+          title={video.title}
+        ></iframe>
+      {/if}
+    </div>
+    <p class="video-title">{video.title}</p>
+  </div>
+{/each}
+      </div>
+    </div>
+  </section>
+{/if}
     <!-- ── Records + News ── -->
     <section class="section pubs-section">
       <div class="section-inner two-col">
@@ -1511,11 +1590,10 @@
   }
   .section-label {
     font-family: Koulen;
-    font-size: 0.68rem;
-    font-weight: 700;
+    font-size: 2rem;
+    font-weight: 500;
     text-transform: uppercase;
-    letter-spacing: 0.15em;
-    color: #999;
+    color: #070707;
     margin-bottom: 1.75rem;
     padding-bottom: 0.6rem;
     border-bottom: 1px solid #eee;
@@ -1974,4 +2052,40 @@
       flex-direction: column;
     }
   }
+  /* ── Videos ── */
+.videos-section { background: #fafafa; }
+.videos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  max-width: 800px;
+}
+.video-card {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-top: 3px solid #009edb;
+  overflow: hidden;
+  border-radius: 12px;
+}
+.video-wrap {
+  position: relative;
+  padding-bottom: 120%;
+  height: 0;
+  overflow: hidden;
+  background: #000;
+}
+.video-wrap iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.video-title {
+  font-family: sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #222;
+  padding: 0.6rem 0.75rem;
+}
 </style>
