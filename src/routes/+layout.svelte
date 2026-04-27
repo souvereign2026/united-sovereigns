@@ -1,4 +1,5 @@
 <script>
+import { base } from '$app/paths';
   import '../app.css';
   import { page } from '$app/stores';
   let menuOpen = $state(false);
@@ -33,8 +34,8 @@
   <!-- Logo + title + search -->
   <div class="masthead">
     <div class="masthead-inner">
-      <a href="/" class="brand">
-	  <img src="/united_sovereigns_logo.svg" alt="DocShelf logo" class="brand-logo-img" />
+<a href="{base}/" class="brand">
+  <img src="{base}/united_sovereigns_logo.svg" alt="United Sovereigns logo" class="brand-logo-img" />
         <div class="brand-text">
           <span class="brand-name">United <br> Sovereigns</span>
           <span class="brand-sub">Open circle of Living Souls</span>
@@ -48,11 +49,11 @@
     </div>
   </div>
 
-  <!-- Main nav bar -->
+<!-- Main nav bar -->
   <nav class="navbar">
     <div class="navbar-inner">
       {#each nav as n}
-        <a href={n.href} class:active={$page.url.pathname === n.href}>{n.label}</a>
+        <a href="{base}{n.href}" class:active={$page.url.pathname === base + n.href}>{n.label}</a>
       {/each}
     </div>
 
@@ -65,13 +66,12 @@
   {#if menuOpen}
     <div class="mobile-menu">
       {#each nav as n}
-        <a href={n.href} onclick={() => menuOpen = false}>{n.label}</a>
+        <a href="{base}{n.href}" onclick={() => menuOpen = false}>{n.label}</a>
       {/each}
     </div>
   {/if}
 
   <main><slot /></main>
-
   <footer>
     <span>© {new Date().getFullYear()} DocShelf</span>
     <span class="dim">store · share · archive</span>

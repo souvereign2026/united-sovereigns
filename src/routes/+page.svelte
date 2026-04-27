@@ -1,4 +1,5 @@
 <script>
+import { base } from '$app/paths';
   import { docs, CATEGORIES } from '$lib/store.js';
 
   let search = $state('');
@@ -74,7 +75,7 @@
     These words are new and they are ours. Solven. Circle. Bond. Tally. The living way carries its own tongue — learn it here, carry it forward.
       </p>
       <div class="hero-actions">
-        <a href="/docs/Agenda_Living_Way.pdf" target="_blank" class="btn-outline">↗ Read Agenda Living Way</a>
+        <a href="{base}/docs/Agenda_Living_Way.pdf" target="_blank" class="btn-outline">↗ Read Agenda Living Way</a>
         <a href="#archive" class="btn-outline">Browse Archive</a>
       </div>
     </div>
@@ -110,97 +111,97 @@
     <div class="goals-title">Living Way Goals — United Sovereigns</div>
     <div class="goals-grid">
 
-<a href="/goals/1" class="tile t1">
+<a href="{base}/goals/1" class="tile t1">
         <span class="tile-num">1</span>
         <div class="tile-icon"><svg viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="19" cy="10" r="4" fill="#A8D5BE"/><line x1="19" y1="1" x2="19" y2="5" stroke="#A8D5BE" stroke-width="1.5" stroke-linecap="round"/><line x1="27" y1="4" x2="24.5" y2="6.5" stroke="#A8D5BE" stroke-width="1.5" stroke-linecap="round"/><line x1="30" y1="10" x2="26" y2="10" stroke="#A8D5BE" stroke-width="1.5" stroke-linecap="round"/><line x1="11" y1="4" x2="13.5" y2="6.5" stroke="#A8D5BE" stroke-width="1.5" stroke-linecap="round"/><line x1="8" y1="10" x2="12" y2="10" stroke="#A8D5BE" stroke-width="1.5" stroke-linecap="round"/><line x1="19" y1="16" x2="19" y2="24" stroke="#A8D5BE" stroke-width="1.8" stroke-linecap="round"/><line x1="14" y1="19" x2="24" y2="19" stroke="#A8D5BE" stroke-width="1.5" stroke-linecap="round"/><line x1="19" y1="24" x2="15" y2="30" stroke="#A8D5BE" stroke-width="1.8" stroke-linecap="round"/><line x1="19" y1="24" x2="23" y2="30" stroke="#A8D5BE" stroke-width="1.8" stroke-linecap="round"/></svg></div>
         <div class="tile-label">No Intermediary</div>
 </a>
 
-<a href="/goals/2" class="tile t2">
+<a href="{base}/goals/2" class="tile t2">
   <span class="tile-num">2</span>
   <div class="tile-icon"><svg viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="19" cy="19" r="15" fill="none" stroke="#D0A0F0" stroke-width="0.6" opacity="0.4" stroke-dasharray="2 3"/><circle cx="19" cy="9" r="3.5" fill="none" stroke="#D0A0F0" stroke-width="1.5"/><line x1="19" y1="13" x2="19" y2="24" stroke="#D0A0F0" stroke-width="1.5" stroke-linecap="round"/><line x1="14" y1="18" x2="24" y2="18" stroke="#D0A0F0" stroke-width="1.3" stroke-linecap="round"/><line x1="19" y1="24" x2="15" y2="31" stroke="#D0A0F0" stroke-width="1.5" stroke-linecap="round"/><line x1="19" y1="24" x2="23" y2="31" stroke="#D0A0F0" stroke-width="1.5" stroke-linecap="round"/></svg></div>
   <div class="tile-label">The Living Body</div>
 </a>
 
-<a href="/goals/3" class="tile t3">
+<a href="{base}/goals/3" class="tile t3">
         <span class="tile-num">3</span>
         <div class="tile-icon"><svg viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="8" y="12" width="5" height="20" rx="2" fill="#F5C87A"/><rect x="16" y="8" width="5" height="24" rx="2" fill="#F5C87A"/><line x1="10" y1="15" x2="13" y2="15" stroke="#7D3C00" stroke-width="1"/><line x1="10" y1="18" x2="13" y2="18" stroke="#7D3C00" stroke-width="1"/><line x1="10" y1="21" x2="13" y2="21" stroke="#7D3C00" stroke-width="1"/><line x1="18" y1="11" x2="21" y2="11" stroke="#7D3C00" stroke-width="1"/><line x1="18" y1="14" x2="21" y2="14" stroke="#7D3C00" stroke-width="1"/><line x1="18" y1="17" x2="21" y2="17" stroke="#7D3C00" stroke-width="1"/><line x1="18" y1="20" x2="21" y2="20" stroke="#7D3C00" stroke-width="1"/><line x1="25" y1="14" x2="30" y2="14" stroke="#F5C87A" stroke-width="2" stroke-linecap="round"/><line x1="25" y1="20" x2="30" y2="20" stroke="#F5C87A" stroke-width="2" stroke-linecap="round"/><line x1="25" y1="26" x2="30" y2="26" stroke="#F5C87A" stroke-width="2" stroke-linecap="round"/></svg></div>
         <div class="tile-label">The Tally</div>
 </a>
 
-<a href="/goals/4" class="tile t4">
+<a href="{base}/goals/4" class="tile t4">
         <span class="tile-num">4</span>
         <div class="tile-icon"><svg viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg"><polygon points="19,6 32,18 6,18" fill="none" stroke="#A0B8F0" stroke-width="1.8"/><rect x="12" y="18" width="14" height="14" rx="1" fill="none" stroke="#A0B8F0" stroke-width="1.8"/><rect x="16" y="24" width="6" height="8" rx="1" fill="#A0B8F0"/><rect x="13" y="20" width="4" height="4" rx="0.5" fill="#A0B8F0"/><rect x="21" y="20" width="4" height="4" rx="0.5" fill="#A0B8F0"/></svg></div>
         <div class="tile-label">Shelter Reclaimed</div>
 </a>
 
-<a href="/goals/5" class="tile t5">
+<a href="{base}/goals/5" class="tile t5">
   <span class="tile-num">5</span>
   <div class="tile-icon"><svg viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="19" cy="19" r="8" fill="none" stroke="#F0A0A0" stroke-width="1.8"/><circle cx="19" cy="19" r="3" fill="#F0A0A0"/><line x1="19" y1="7" x2="19" y2="4" stroke="#F0A0A0" stroke-width="1.5" stroke-linecap="round"/><line x1="19" y1="31" x2="19" y2="34" stroke="#F0A0A0" stroke-width="1.5" stroke-linecap="round"/><line x1="7" y1="19" x2="4" y2="19" stroke="#F0A0A0" stroke-width="1.5" stroke-linecap="round"/><line x1="31" y1="19" x2="34" y2="19" stroke="#F0A0A0" stroke-width="1.5" stroke-linecap="round"/><path d="M14 10 Q10 14 10 19" stroke="#F0A0A0" stroke-width="1.2" stroke-linecap="round" fill="none"/><path d="M24 10 Q28 14 28 19" stroke="#F0A0A0" stroke-width="1.2" stroke-linecap="round" fill="none"/><path d="M24 28 Q28 24 28 19" stroke="#F0A0A0" stroke-width="1.2" stroke-linecap="round" fill="none"/><path d="M14 28 Q10 24 10 19" stroke="#F0A0A0" stroke-width="1.2" stroke-linecap="round" fill="none"/></svg></div>
   <div class="tile-label">Living Engine</div>
 </a>
 
-<a href="/goals/6" class="tile t6">
+<a href="{base}/goals/6" class="tile t6">
   <span class="tile-num">6</span>
   <div class="tile-icon"><svg viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="19" y1="32" x2="19" y2="16" stroke="#B0D878" stroke-width="2" stroke-linecap="round"/><path d="M19 16 Q19 8 26 8 Q22 12 19 16" fill="#B0D878"/><path d="M19 20 Q14 14 8 16 Q12 18 19 20" fill="#B0D878"/><path d="M19 24 Q24 18 30 20 Q26 22 19 24" fill="#B0D878"/><path d="M12 32 Q15 28 19 32 Q23 28 26 32" stroke="#B0D878" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg></div>
   <div class="tile-label">Living Soil</div>
 </a>
 
-<a href="/goals/7" class="tile t7">
+<a href="{base}/goals/7" class="tile t7">
   <span class="tile-num">7</span>
   <div class="tile-icon"><svg viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 16 Q10 28 19 28 Q28 28 28 16 Z" fill="none" stroke="#F5B87A" stroke-width="1.8"/><path d="M10 16 Q19 12 28 16" fill="none" stroke="#F5B87A" stroke-width="1.8"/><line x1="19" y1="28" x2="19" y2="33" stroke="#F5B87A" stroke-width="1.8" stroke-linecap="round"/><line x1="14" y1="33" x2="24" y2="33" stroke="#F5B87A" stroke-width="1.8" stroke-linecap="round"/><circle cx="16" cy="20" r="1.5" fill="#F5B87A"/><circle cx="22" cy="20" r="1.5" fill="#F5B87A"/><path d="M16 24 Q19 26.5 22 24" stroke="#F5B87A" stroke-width="1.2" fill="none" stroke-linecap="round"/><line x1="19" y1="12" x2="19" y2="8" stroke="#F5B87A" stroke-width="1.5" stroke-linecap="round"/></svg></div>
   <div class="tile-label">The Clean Table</div>
 </a>
 
-<a href="/goals/8" class="tile t8">
+<a href="{base}/goals/8" class="tile t8">
   <span class="tile-num">8</span>
   <div class="tile-icon"><svg viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19 8 L22 16 L19 28 L16 16 Z" fill="#80D4F0" opacity="0.9"/><ellipse cx="19" cy="16" rx="6" ry="3" fill="none" stroke="#80D4F0" stroke-width="1.2"/><circle cx="19" cy="28" r="2" fill="#80D4F0"/></svg></div>
   <div class="tile-label">Sacred Water</div>
 </a>
 
-<a href="/goals/9" class="tile t9">
+<a href="{base}/goals/9" class="tile t9">
   <span class="tile-num">9</span>
   <div class="tile-icon"><svg viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="19" cy="19" r="6" fill="#78C8F0"/><line x1="19" y1="4" x2="19" y2="9" stroke="#78C8F0" stroke-width="2" stroke-linecap="round"/><line x1="19" y1="29" x2="19" y2="34" stroke="#78C8F0" stroke-width="2" stroke-linecap="round"/><line x1="4" y1="19" x2="9" y2="19" stroke="#78C8F0" stroke-width="2" stroke-linecap="round"/><line x1="29" y1="19" x2="34" y2="19" stroke="#78C8F0" stroke-width="2" stroke-linecap="round"/><line x1="8" y1="8" x2="11.5" y2="11.5" stroke="#78C8F0" stroke-width="1.5" stroke-linecap="round"/><line x1="26.5" y1="26.5" x2="30" y2="30" stroke="#78C8F0" stroke-width="1.5" stroke-linecap="round"/><line x1="30" y1="8" x2="26.5" y2="11.5" stroke="#78C8F0" stroke-width="1.5" stroke-linecap="round"/><line x1="11.5" y1="26.5" x2="8" y2="30" stroke="#78C8F0" stroke-width="1.5" stroke-linecap="round"/></svg></div>
   <div class="tile-label">Blue Sky</div>
 </a>
 
-<a href="/goals/10" class="tile t10">
+<a href="{base}/goals/10" class="tile t10">
   <span class="tile-num">10</span>
   <div class="tile-icon"><svg viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="9" y="8" width="20" height="24" rx="2" fill="none" stroke="#90D8A8" stroke-width="1.8"/><rect x="13" y="8" width="12" height="4" rx="1" fill="#90D8A8"/><line x1="13" y1="17" x2="25" y2="17" stroke="#90D8A8" stroke-width="1.2" stroke-linecap="round"/><line x1="13" y1="20.5" x2="25" y2="20.5" stroke="#90D8A8" stroke-width="1.2" stroke-linecap="round"/><line x1="13" y1="24" x2="21" y2="24" stroke="#90D8A8" stroke-width="1.2" stroke-linecap="round"/><circle cx="27" cy="27" r="5" fill="#1A4A2E" stroke="#90D8A8" stroke-width="1.5"/><line x1="25" y1="27" x2="29" y2="27" stroke="#90D8A8" stroke-width="1.5" stroke-linecap="round"/><line x1="27" y1="25" x2="27" y2="29" stroke="#90D8A8" stroke-width="1.5" stroke-linecap="round"/></svg></div>
   <div class="tile-label">Open Archive</div>
 </a>
 
-<a href="/goals/11" class="tile t11">
+<a href="{base}/goals/11" class="tile t11">
   <span class="tile-num">11</span>
   <div class="tile-icon"><svg viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="13" cy="10" r="3.5" fill="none" stroke="#F5C87A" stroke-width="1.5"/><circle cx="25" cy="14" r="2.5" fill="none" stroke="#F5C87A" stroke-width="1.5"/><line x1="13" y1="14" x2="13" y2="24" stroke="#F5C87A" stroke-width="1.5" stroke-linecap="round"/><line x1="8" y1="18" x2="18" y2="18" stroke="#F5C87A" stroke-width="1.3" stroke-linecap="round"/><line x1="13" y1="24" x2="10" y2="30" stroke="#F5C87A" stroke-width="1.5" stroke-linecap="round"/><line x1="13" y1="24" x2="16" y2="30" stroke="#F5C87A" stroke-width="1.5" stroke-linecap="round"/><line x1="25" y1="17" x2="25" y2="26" stroke="#F5C87A" stroke-width="1.5" stroke-linecap="round"/><line x1="21" y1="21" x2="29" y2="21" stroke="#F5C87A" stroke-width="1.3" stroke-linecap="round"/><line x1="25" y1="26" x2="22" y2="32" stroke="#F5C87A" stroke-width="1.5" stroke-linecap="round"/><line x1="25" y1="26" x2="28" y2="32" stroke="#F5C87A" stroke-width="1.5" stroke-linecap="round"/></svg></div>
   <div class="tile-label">Living Teaching</div>
 </a>
 
-<a href="/goals/12" class="tile t12">
+<a href="{base}/goals/12" class="tile t12">
   <span class="tile-num">12</span>
   <div class="tile-icon"><svg viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="4" y1="30" x2="34" y2="30" stroke="#D4A870" stroke-width="2" stroke-linecap="round"/><polygon points="19,8 28,20 10,20" fill="none" stroke="#D4A870" stroke-width="1.8"/><rect x="14" y="20" width="10" height="10" fill="none" stroke="#D4A870" stroke-width="1.8"/><rect x="16.5" y="23" width="5" height="7" fill="#D4A870"/><circle cx="8" cy="24" r="3" fill="none" stroke="#D4A870" stroke-width="1.2"/><circle cx="30" cy="24" r="3" fill="none" stroke="#D4A870" stroke-width="1.2"/></svg></div>
   <div class="tile-label">Open Land</div>
 </a>
 
-<a href="/goals/13" class="tile t13">
+<a href="{base}/goals/13" class="tile t13">
   <span class="tile-num">13</span>
   <div class="tile-icon"><svg viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="19" cy="19" r="11" fill="none" stroke="#80D8D8" stroke-width="1.5"/><circle cx="19" cy="8" r="2.5" fill="#80D8D8"/><circle cx="28.5" cy="13.5" r="2.5" fill="#80D8D8"/><circle cx="28.5" cy="24.5" r="2.5" fill="#80D8D8"/><circle cx="19" cy="30" r="2.5" fill="#80D8D8"/><circle cx="9.5" cy="24.5" r="2.5" fill="#80D8D8"/><circle cx="9.5" cy="13.5" r="2.5" fill="#80D8D8"/><circle cx="19" cy="19" r="2" fill="#80D8D8"/><line x1="19" y1="10.5" x2="19" y2="17" stroke="#80D8D8" stroke-width="1" stroke-linecap="round"/><line x1="26.5" y1="15" x2="21" y2="18" stroke="#80D8D8" stroke-width="1" stroke-linecap="round"/><line x1="26.5" y1="23" x2="21" y2="20" stroke="#80D8D8" stroke-width="1" stroke-linecap="round"/><line x1="19" y1="27.5" x2="19" y2="21" stroke="#80D8D8" stroke-width="1" stroke-linecap="round"/><line x1="11.5" y1="23" x2="17" y2="20" stroke="#80D8D8" stroke-width="1" stroke-linecap="round"/><line x1="11.5" y1="15" x2="17" y2="18" stroke="#80D8D8" stroke-width="1" stroke-linecap="round"/></svg></div>
   <div class="tile-label">The Circle</div>
 </a>
 
-<a href="/goals/14" class="tile t14">
+<a href="{base}/goals/14" class="tile t14">
   <span class="tile-num">14</span>
   <div class="tile-icon"><svg viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19 30 Q19 20 19 16" stroke="#D4A870" stroke-width="2" stroke-linecap="round"/><path d="M19 16 Q14 10 8 12" stroke="#D4A870" stroke-width="1.8" fill="none" stroke-linecap="round"/><path d="M19 16 Q24 10 30 12" stroke="#D4A870" stroke-width="1.8" fill="none" stroke-linecap="round"/><path d="M19 20 Q13 16 7 18" stroke="#D4A870" stroke-width="1.3" fill="none" stroke-linecap="round" opacity="0.7"/><path d="M19 20 Q25 16 31 18" stroke="#D4A870" stroke-width="1.3" fill="none" stroke-linecap="round" opacity="0.7"/><line x1="14" y1="30" x2="24" y2="30" stroke="#D4A870" stroke-width="1.5" stroke-linecap="round"/></svg></div>
   <div class="tile-label">Know each Other</div>
 </a>
 
-<a href="/goals/15" class="tile t15">
+<a href="{base}/goals/15" class="tile t15">
   <span class="tile-num">15</span>
   <div class="tile-icon"><svg viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="19" cy="19" r="3" fill="#9090F0"/><circle cx="8" cy="10" r="2.5" fill="none" stroke="#9090F0" stroke-width="1.5"/><circle cx="30" cy="10" r="2.5" fill="none" stroke="#9090F0" stroke-width="1.5"/><circle cx="8" cy="28" r="2.5" fill="none" stroke="#9090F0" stroke-width="1.5"/><circle cx="30" cy="28" r="2.5" fill="none" stroke="#9090F0" stroke-width="1.5"/><circle cx="4" cy="19" r="2" fill="none" stroke="#9090F0" stroke-width="1.3"/><circle cx="34" cy="19" r="2" fill="none" stroke="#9090F0" stroke-width="1.3"/><line x1="16" y1="18" x2="10.5" y2="12" stroke="#9090F0" stroke-width="1" stroke-linecap="round"/><line x1="22" y1="18" x2="27.5" y2="12" stroke="#9090F0" stroke-width="1" stroke-linecap="round"/><line x1="16" y1="20" x2="10.5" y2="26" stroke="#9090F0" stroke-width="1" stroke-linecap="round"/><line x1="22" y1="20" x2="27.5" y2="26" stroke="#9090F0" stroke-width="1" stroke-linecap="round"/><line x1="16" y1="19" x2="6" y2="19" stroke="#9090F0" stroke-width="1" stroke-linecap="round"/><line x1="22" y1="19" x2="32" y2="19" stroke="#9090F0" stroke-width="1" stroke-linecap="round"/></svg></div>
   <div class="tile-label">The Way Spreads</div>
 </a>
 
-<a href="/goals/16" class="tile t16">
+<a href="{base}/goals/16" class="tile t16">
   <span class="tile-num">16</span>
   <div class="tile-icon"><svg viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="6" y1="32" x2="6" y2="16" stroke="#D4D480" stroke-width="2" stroke-linecap="round"/><line x1="12" y1="32" x2="12" y2="10" stroke="#D4D480" stroke-width="2" stroke-linecap="round"/><line x1="18" y1="32" x2="18" y2="20" stroke="#D4D480" stroke-width="2" stroke-linecap="round"/><line x1="24" y1="32" x2="24" y2="14" stroke="#D4D480" stroke-width="2" stroke-linecap="round"/><line x1="30" y1="32" x2="30" y2="8" stroke="#D4D480" stroke-width="2" stroke-linecap="round"/><path d="M6 16 Q9 13 12 10 Q15 15 18 20 Q21 17 24 14 Q27 11 30 8" stroke="#D4D480" stroke-width="1.3" fill="none" stroke-linecap="round"/><circle cx="6" cy="16" r="1.8" fill="#D4D480"/><circle cx="12" cy="10" r="1.8" fill="#D4D480"/><circle cx="18" cy="20" r="1.8" fill="#D4D480"/><circle cx="24" cy="14" r="1.8" fill="#D4D480"/><circle cx="30" cy="8" r="1.8" fill="#D4D480"/><line x1="4" y1="32" x2="34" y2="32" stroke="#D4D480" stroke-width="1.2" stroke-linecap="round"/></svg></div>
   <div class="tile-label"> flourish of the living way</div>
@@ -216,7 +217,7 @@
 
     <div class="section-header">
       <h2>Living Archive</h2>
-      <a href="/upload" class="btn-solid-sm">+ Give a Record</a>
+      <a href="{base}/upload" class="btn-solid-sm">+ Give a Record</a>
     </div>
 
     <!-- Controls -->
@@ -251,7 +252,7 @@
     {#if filtered.length === 0}
       <div class="empty">
         <p>Nothing found.</p>
-        <a href="/upload" class="btn-solid">Give one</a>
+        <a href="{base}/upload" class="btn-solid">Give one</a>
       </div>
     {:else}
       <div class="grid">

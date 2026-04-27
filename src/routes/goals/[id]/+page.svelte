@@ -1,4 +1,5 @@
 <script>
+  import { base } from "$app/paths";
   import { page } from "$app/stores";
   import { goals, docs } from "$lib/store.js";
 
@@ -267,7 +268,7 @@
         title:
           "Old books that shows some realities but wont give you full answers",
         source: "Living In The Private",
-        pdf: "/docs/Living-In-The-Private.pdf",
+        pdf: `${base}/docs/Living-In-The-Private.pdf`,
       },
     ],
     "2": [
@@ -376,7 +377,7 @@
 {#if !goal}
   <div class="not-found">
     <p>Goal not found.</p>
-    <a href="/">← Back to Archive</a>
+    <a href="{base}/">← Back to Archive</a>
   </div>
 {:else}
   <div class="goal-page">
@@ -388,7 +389,7 @@
       ></div>
       <div class="hero-inner">
         <div class="hero-nav">
-          <a href="/" class="nav-pill">Goals</a>
+          <a href="{base}/" class="nav-pill">Goals</a>
         </div>
         <div class="hero-content">
           <div class="goal-badge">Goal {goal.id}</div>
@@ -396,9 +397,12 @@
           <div class="title-bar"></div>
           <p class="hero-summary">{goal.summary}</p>
           <div class="hero-nav-btns">
-            <a href="/goals/{prevGoal().id}" class="hero-pill-btn">← Previous</a
+            <a href="{base}/goals/{prevGoal().id}" class="hero-pill-btn"
+              >← Previous</a
             >
-            <a href="/goals/{nextGoal().id}" class="hero-pill-btn">Next →</a>
+            <a href="{base}/goals/{nextGoal().id}" class="hero-pill-btn"
+              >Next →</a
+            >
           </div>
         </div>
 
@@ -1094,7 +1098,7 @@
         >
           <div class="info-header">
             <img
-              src="/goals_wheel.svg"
+              src="{base}/goals_wheel.svg"
               alt="Goals"
               style="width:44px;height:44px;"
             />
@@ -1103,13 +1107,17 @@
           </div>
 
           <div class="info-body">
-          <svg viewBox="0 0 500 520" width="100%" style="max-width:860px; display:block;">
+            <svg
+              viewBox="0 0 500 520"
+              width="100%"
+              style="max-width:860px; display:block;"
+            >
               {#each Array(16) as _, i}
                 {@const angle = (((i * 360) / 16 - 90) * Math.PI) / 180}
                 {@const r = 190}
                 {@const cx = 250 + r * Math.cos(angle)}
                 {@const cy = 220 + r * Math.sin(angle)}
-                <a href="/goals/{i + 1}">
+                <a href="{base}/goals/{i + 1}">
                   <circle
                     {cx}
                     {cy}
@@ -1252,7 +1260,7 @@
         <div class="related-grid">
           {#each relatedGoals as rg}
             <a
-              href="/goals/{rg.id}"
+              href="{base}/goals/{rg.id}"
               class="related-tile"
               style="background:{rg.gradient ?? rg.color}; color:{rg.textColor}"
             >
@@ -1299,8 +1307,10 @@
           {:else}
             <div class="empty-pubs">
               <p>No records yet for this goal.</p>
-              <a href="/upload" class="upload-link" style="color:{goal.color}"
-                >+ Give a record →</a
+              <a
+                href="{base}/upload"
+                class="upload-link"
+                style="color:{goal.color}">+ Give a record →</a
               >
             </div>
           {/if}
@@ -1332,17 +1342,21 @@
     <!-- ── Bottom nav ── -->
     <div class="bottom-nav">
       <a
-        href="/goals/{prevGoal().id}"
+        href="{base}/goals/{prevGoal().id}"
         class="bottom-btn"
         style="border-color:{goal.color}; color:{goal.color}"
       >
         ← {prevGoal().title}
       </a>
-      <a href="/" class="bottom-btn-center" style="background:{goal.color}">
+      <a
+        href="{base}/"
+        class="bottom-btn-center"
+        style="background:{goal.color}"
+      >
         All 16 Goals
       </a>
       <a
-        href="/goals/{nextGoal().id}"
+        href="{base}/goals/{nextGoal().id}"
         class="bottom-btn"
         style="border-color:{goal.color}; color:{goal.color}"
       >

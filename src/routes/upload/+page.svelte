@@ -1,6 +1,7 @@
 <script>
+import { base } from '$app/paths';
   import { docs, CATEGORIES } from '$lib/store.js';
-  import { goto } from '$app/navigation';
+goto(`${base}/`);
 
   let title = $state('');
   let author = $state('');
@@ -164,7 +165,7 @@
     {/if}
 
     <div class="form-actions">
-      <a href="/" class="btn-ghost">Cancel</a>
+      <a href="{base}/" class="btn-ghost">Cancel</a>
       <button type="submit" class="btn-submit" disabled={submitting}>
         {submitting ? 'Uploading…' : '↑ Add to Shelf'}
       </button>
