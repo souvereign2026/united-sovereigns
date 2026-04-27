@@ -211,12 +211,13 @@ import { base } from '$app/paths';
   </div>
 </section>
 
+
 <!-- ── Archive Section ── -->
 <section class="library" id="archive">
   <div class="library-inner">
 
     <div class="section-header">
-      <h2>Living Archive</h2>
+      <h2>Archive</h2>
       <a href="{base}/upload" class="btn-solid-sm">+ Give a Record</a>
     </div>
 
@@ -285,6 +286,36 @@ import { base } from '$app/paths';
   </div>
 </section>
 
+<!-- ── Videos Section ── -->
+<section class="videos-section">
+  <div class="videos-inner">
+    <div class="section-header">
+      <h2>Videos</h2>
+    </div>
+    <div class="videos-grid">
+  {#each [
+  { id: 'fwls2c', title: 'THERES MORE LAND' },
+  { id: '91g5gs', title: 'The “Healing Cathedral” of Armenia 🇦🇲' },
+  { id: 'yz2760', title: 'The bumblebee is a truly magical creature' },
+  { id: 'j1q2w4', title: 'The plant that fuels any engine was buried' },
+  { id: '1ui5ro', title: 'Antonio Ferretti was an Italian engineer who invented ＂Lanital＂' },
+  { id: '03qxuy', title: '🎶 Each Sound Frequency produces a unique vibrational pattern' },
+] as video}
+        <div class="video-card">
+          <div class="video-wrap">
+            <iframe
+              src="https://streamable.com/e/{video.id}"
+              frameborder="0"
+              allowfullscreen
+              title={video.title}
+            ></iframe>
+          </div>
+          <p class="video-title">{video.title}</p>
+        </div>
+      {/each}
+    </div>
+  </div>
+</section>
 <style>
   /* ── Hero ── */
   .hero {
@@ -691,4 +722,62 @@ import { base } from '$app/paths';
     .stat { padding: 0.5rem 1rem; }
     .grid { grid-template-columns: 1fr; }
   }
+
+  /* ── Videos ── */
+.videos-section {
+  background: #fff;
+  padding: 2.5rem 2rem 3rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.videos-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.videos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.video-card {
+  background: #fafafa;
+  border: 1px solid #e0e0e0;
+  border-top: 5px solid #009edb;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.video-wrap {
+  position: relative;
+  padding-bottom: 120%;
+  height: 0;
+  overflow: hidden;
+  background: #000;
+}
+
+.video-wrap iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video-title {
+  font-family: sans-serif;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #222;
+  padding: 0.75rem 1rem;
+}
+
+@media (max-width: 480px) {
+.videos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  max-width: 800px;
+}}
 </style>
