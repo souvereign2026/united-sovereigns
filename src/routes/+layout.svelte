@@ -1,5 +1,5 @@
 <script>
-  import { base } from '$app/paths';
+  import '../app.css';
   import { page } from '$app/stores';
   let menuOpen = $state(false);
 
@@ -34,7 +34,7 @@
   <div class="masthead">
     <div class="masthead-inner">
       <a href="/" class="brand">
-	 <img src="{base}/united_sovereigns_logo.svg" alt="logo" class="brand-logo-img" />
+	  <img src="/united_sovereigns_logo.svg" alt="DocShelf logo" class="brand-logo-img" />
         <div class="brand-text">
           <span class="brand-name">United <br> Sovereigns</span>
           <span class="brand-sub">Open circle of Living Souls</span>
@@ -274,7 +274,7 @@
     display: flex;
     justify-content: space-between;
     font-size: 0.75rem;
-    font-family: Koulen;
+    font-family: sans-serif;
   }
 
   .dim { font-style: italic; }
