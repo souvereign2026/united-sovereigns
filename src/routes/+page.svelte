@@ -296,7 +296,7 @@ import { base } from '$app/paths';
   {#each [
   { id: '91g5gs', title: 'The “Healing Cathedral” of Armenia 🇦🇲' },
   { id: 'yz2760', title: 'The bumblebee is a truly magical creature' },
-  { id: 'j1q2w4', title: 'The plant that fuels any engine was buried' },
+  { id: 'j1q2w4', title: 'The plant that fuels any engine' },
   { id: '1ui5ro', title: 'Antonio Ferretti was an Italian engineer who invented ＂Lanital＂' },
   { id: '03qxuy', title: '🎶 Each Sound Frequency produces a unique vibrational pattern' },
 ] as video}
