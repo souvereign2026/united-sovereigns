@@ -294,7 +294,6 @@ import { base } from '$app/paths';
     </div>
     <div class="videos-grid">
   {#each [
-  { id: 'fwls2c', title: 'THERES MORE LAND' },
   { id: '91g5gs', title: 'The “Healing Cathedral” of Armenia 🇦🇲' },
   { id: 'yz2760', title: 'The bumblebee is a truly magical creature' },
   { id: 'j1q2w4', title: 'The plant that fuels any engine was buried' },
