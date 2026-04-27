@@ -4,7 +4,8 @@ export default {
   kit: {
     adapter: adapter({
       pages: 'build',
-      assets: 'build'
+      assets: 'build',
+      fallback: '200.html'
     }),
     paths: {
       base: '/united-sovereigns'
