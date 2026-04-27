@@ -380,35 +380,32 @@
     { id: 'HDwO0HBZhPI', title: 'Electroculture', type: 'youtube' },
   ],
   "7": [
-    { id: 'fwls2c', title: 'The Clean Table' },
-  ],
-  "8": [
-    { id: 'fwls2c', title: 'Sacred Water' },
-  ],
-  "9": [
-    { id: 'fwls2c', title: 'Blue Sky' },
-  ],
-  "10": [
-    { id: 'fwls2c', title: 'Open Archive' },
-  ],
-  "11": [
-    { id: 'fwls2c', title: 'Living Teaching' },
-  ],
-  "12": [
-    { id: 'fwls2c', title: 'Open Land' },
-  ],
-  "13": [
-    { id: 'fwls2c', title: 'The Circle' },
-  ],
-  "14": [
-    { id: 'fwls2c', title: 'Know Each Other' },
-  ],
-  "15": [
-    { id: 'fwls2c', title: 'The Way Spreads' },
-  ],
-  "16": [
-    { id: 'fwls2c', title: 'What Flourishes' },
-  ],
+  { type: 'book', title: 'The Clean Table — Living Food Guide', pdf: `${base}/docs/clean-table-guide.pdf` },
+    { type: 'book', title: 'Is Meat Good or Bad', pdf: `${base}/docs/_Is Meat Good or Bad_2022_ebook.pdf` },
+        { type: 'book', title: 'How To Heal Your Metabolism', pdf: `${base}/docs/How-to-heal.epub` },
+],
+
+  // "10": [
+  //   { id: 'fwls2c', title: 'Open Archive' },
+  // ],
+  // "11": [
+  //   { id: 'fwls2c', title: 'Living Teaching' },
+  // ],
+  // "12": [
+  //   { id: 'fwls2c', title: 'Open Land' },
+  // ],
+  // "13": [
+  //   { id: 'fwls2c', title: 'The Circle' },
+  // ],
+  // "14": [
+  //   { id: 'fwls2c', title: 'Know Each Other' },
+  // ],
+  // "15": [
+  //   { id: 'fwls2c', title: 'The Way Spreads' },
+  // ],
+  // "16": [
+  //   { id: 'fwls2c', title: 'What Flourishes' },
+  // ],
 };
 
 let videos = $derived(goalVideos[id] ?? []);
@@ -1324,28 +1321,44 @@ let videos = $derived(goalVideos[id] ?? []);
 {#if videos.length > 0}
   <section class="section videos-section">
     <div class="section-inner">
-      <div class="section-label">Related videos</div>
+   <div class="section-label">
+  {#if videos.every(v => v.type === 'book')}
+    Related Books
+  {:else if videos.every(v => v.type !== 'book')}
+    Related Videos
+  {:else}
+    Related Media
+  {/if}
+</div>
       <div class="videos-grid">
-  {#each videos as video}
+{#each videos as video}
   <div class="video-card">
-    <div class="video-wrap">
-      {#if video.type === 'youtube'}
-        <iframe
-          src="https://www.youtube.com/embed/{video.id}"
-          frameborder="0"
-          allowfullscreen
-          title={video.title}
-        ></iframe>
-      {:else}
-        <iframe
-          src="https://streamable.com/e/{video.id}"
-          frameborder="0"
-          allowfullscreen
-          title={video.title}
-        ></iframe>
-      {/if}
-    </div>
-    <p class="video-title">{video.title}</p>
+    {#if video.type === 'book'}
+      <div class="book-card-inner">
+        <span class="book-icon">📖</span>
+        <p class="video-title">{video.title}</p>
+        <a href={video.pdf} target="_blank" class="book-link">↗ Read PDF</a>
+      </div>
+    {:else}
+      <div class="video-wrap">
+        {#if video.type === 'youtube'}
+          <iframe
+            src="https://www.youtube.com/embed/{video.id}"
+            frameborder="0"
+            allowfullscreen
+            title={video.title}
+          ></iframe>
+        {:else}
+          <iframe
+            src="https://streamable.com/e/{video.id}"
+            frameborder="0"
+            allowfullscreen
+            title={video.title}
+          ></iframe>
+        {/if}
+      </div>
+      <p class="video-title">{video.title}</p>
+    {/if}
   </div>
 {/each}
       </div>
@@ -2087,5 +2100,33 @@ let videos = $derived(goalVideos[id] ?? []);
   font-weight: 600;
   color: #222;
   padding: 0.6rem 0.75rem;
+}
+.book-card-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.book-icon {
+  font-size: 3rem;
+}
+
+.book-link {
+  font-family: Koulen;
+  font-size: 0.78rem;
+  color: #009edb;
+  border: 1px solid #009edb;
+  border-radius: 999px;
+  padding: 0.35rem 1rem;
+  text-decoration: none;
+  transition: all 0.15s;
+}
+
+.book-link:hover {
+  background: #009edb;
+  color: #fff;
 }
 </style>
