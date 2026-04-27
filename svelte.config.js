@@ -5,7 +5,7 @@ export default {
     adapter: adapter({
       pages: 'build',
       assets: 'build',
-      fallback: '200.html'
+  fallback: 'index.html'
     }),
     paths: {
       base: '/united-sovereigns'
