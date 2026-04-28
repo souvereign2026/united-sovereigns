@@ -370,9 +370,7 @@
   );
 
   const goalVideos = {
-  "1": [
-    { id: '07rurm', title: 'Mental imprisonment explained' },
-  ],
+
   "5": [
     { id: 'TEgAjWfh5qI', title: 'Tiny Steam Engine', type: 'youtube'},
   ],
