@@ -72,7 +72,7 @@ import { base } from '$app/paths';
         Living knowledge, craft and discovery are the instruments by which living solvens advance the Living Way Goals — grounding action in what is true, hastening what is needed, and carrying proven answers to those who hold the greatest need.
       </p>
       <p>
-    These words are new and they are ours. Solven. Circle. Bond. Tally. The living way carries its own tongue — learn it here, carry it forward.
+    These words are new and they are ours. Solven. Circle. Bond. Wechsel. The living way carries its own tongue — learn it here, carry it forward.
       </p>
       <div class="hero-actions">
         <a href="{base}/docs/Agenda_Living_Way.pdf" target="_blank" class="btn-outline">↗ Read Agenda Living Way</a>
