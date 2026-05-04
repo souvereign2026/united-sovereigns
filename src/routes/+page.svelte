@@ -36,7 +36,7 @@ import { base } from '$app/paths';
   const topics = [
     { num: '1',  label: 'No Intermediary',      icon: '☀', color: '#1a4a2e' },
     { num: '2',  label: 'The Living Body',       icon: '♁', color: '#3a1a5e' },
-    { num: '3',  label: 'The Tally',             icon: '▤', color: '#7a4a10' },
+    { num: '3',  label: 'The Wechsel',             icon: '▤', color: '#7a4a10' },
     { num: '4',  label: 'Shelter Reclaimed',     icon: '⌂', color: '#2a3a5e' },
     { num: '5',  label: 'Living Engine',         icon: '◎', color: '#5e1a1a' },
     { num: '6',  label: 'Living Soil',           icon: '✦', color: '#3a4a1a' },
@@ -126,7 +126,7 @@ import { base } from '$app/paths';
 <a href="{base}/goals/3" class="tile t3">
         <span class="tile-num">3</span>
         <div class="tile-icon"><svg viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="8" y="12" width="5" height="20" rx="2" fill="#F5C87A"/><rect x="16" y="8" width="5" height="24" rx="2" fill="#F5C87A"/><line x1="10" y1="15" x2="13" y2="15" stroke="#7D3C00" stroke-width="1"/><line x1="10" y1="18" x2="13" y2="18" stroke="#7D3C00" stroke-width="1"/><line x1="10" y1="21" x2="13" y2="21" stroke="#7D3C00" stroke-width="1"/><line x1="18" y1="11" x2="21" y2="11" stroke="#7D3C00" stroke-width="1"/><line x1="18" y1="14" x2="21" y2="14" stroke="#7D3C00" stroke-width="1"/><line x1="18" y1="17" x2="21" y2="17" stroke="#7D3C00" stroke-width="1"/><line x1="18" y1="20" x2="21" y2="20" stroke="#7D3C00" stroke-width="1"/><line x1="25" y1="14" x2="30" y2="14" stroke="#F5C87A" stroke-width="2" stroke-linecap="round"/><line x1="25" y1="20" x2="30" y2="20" stroke="#F5C87A" stroke-width="2" stroke-linecap="round"/><line x1="25" y1="26" x2="30" y2="26" stroke="#F5C87A" stroke-width="2" stroke-linecap="round"/></svg></div>
-        <div class="tile-label">The Tally</div>
+        <div class="tile-label">The Wechsel</div>
 </a>
 
 <a href="{base}/goals/4" class="tile t4">

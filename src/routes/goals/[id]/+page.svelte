@@ -294,7 +294,7 @@
       },
       {
         date: "2024-11",
-        title: "Living tally systems reduce dispute rates by 60%",
+        title: "Wechsel systems reduce dispute rates by 60%",
         source: "Circle Quarterly",
         pdf: null,
       },
@@ -519,7 +519,7 @@ let videos = $derived(goalVideos[id] ?? []);
                 <circle {cx} {cy} r="2.2" fill="white" opacity="0.95" />
               {/each}
             {:else if id === "3"}
-              <!-- 3. The Tally: open ledgers, public counting -->
+              <!-- 3. The Wechsel: open ledgers, public counting -->
               {#each [80, 180, 280] as x}
                 <path
                   d={`M${x - 30} 30 L${x} 25 L${x + 30} 30 L${x + 30} 80 L${x} 75 L${x - 30} 80 Z`}

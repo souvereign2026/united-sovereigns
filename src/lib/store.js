@@ -33,23 +33,27 @@ function getSamples() {
       title: "Simulation Life Users Guide",
       author: "Anonymous",
       category: "books",
-      description:
-        "Life is as simulation",
+      description: "Life is as simulation",
       size: "18.7 MB",
       pages: 21,
       date: "2024-10-03",
       tags: ["secret", "simulation", "esoteric"],
       fileName: "simulation-life_users-guide.pdf",
-fileData: `${base}/docs/simulation-life_users-guide.pdf`,
+      fileData: `${base}/docs/simulation-life_users-guide.pdf`,
     },
     {
-  id: '3', title: 'Living In The Private', author: 'Unknown',
-  category: 'books', description: 'Educate Yourself, Ask Questions, Verify Everything.',
-  size: '1.4 MB', pages: 489, date: '2025-01-20',
-  tags: ['privacy', 'jurisdiction'],
-  fileName: 'Living-In-The-Private.pdf',
-  fileData: `${base}/docs/Living-In-The-Private.pdf`,
-},
+      id: "3",
+      title: "Living In The Private",
+      author: "Unknown",
+      category: "books",
+      description: "Educate Yourself, Ask Questions, Verify Everything.",
+      size: "1.4 MB",
+      pages: 489,
+      date: "2025-01-20",
+      tags: ["privacy", "jurisdiction"],
+      fileName: "Living-In-The-Private.pdf",
+      fileData: `${base}/docs/Living-In-The-Private.pdf`,
+    },
   ];
 }
 
@@ -113,16 +117,15 @@ export const goals = [
       "Every living soul comes into the world with a body of perfect design. The conditions of good well-being are not complex: clean food in its natural form, clean water, clean air, movement, sunlight, rest and living bonds. A solven that builds on these foundations does not generate the chronic illness that institutional medicine feeds upon. Each soul holds full knowing of its own body — what enters it, what restores it, what harms it. This is not a belief. It is what living souls discover when the poisons are removed. No institution — medical, governmental, or religious — may place itself between a living soul and its own body. The body answers to its creator, not to any earthly authority. Well-being is a living state, not a managed condition.",
     docs: [],
   },
-
-  {
+{
     id: "3",
-    title: "The Tally — a new word for a measure and alternative idea",
+    title: "The Wechsel — the original measure of trust between living men, used across all lands for centuries before banks replaced it with debt",
     color: "#b85c00",
     gradient: "linear-gradient(135deg, #7a2e00 0%, #c96a00 60%, #f0a040 100%)",
     textColor: "#fde8c0",
-    summary: "Every exchange seen by all. Nothing hidden.",
+    summary: "A direct exchange between living souls. No interest. No intermediary. No fiction.",
     description:
-      "A tally is the oldest form of honest record — a mark made in the open, witnessed by all, altered by none. The Tally goal affirms that accounts of value, exchange, and contribution must be legible to every participant. Hidden books breed hidden power. When the record is open, those who hold it cannot lie about what it contains. This goal covers open ledgers, open accounting, open records of circle decisions, and the right of every soul in a solven to read the record that concerns them. The tally carries no interest. It answers to no bank, no sea, no admiral. It is the instrument of living souls exchanging on land.",
+      "The word Wechsel means exchange — nothing more, nothing less. For over five hundred years, from the merchant roads of Lombardy to the trade fairs of Leipzig, men exchanged value face to face and marked it with a single word understood in every tongue: Wechsel in German, вексель in Russian, cambiale in Italian, lettre de change in French. It was never a debt owed to a fiction. It was never a bond to an institution. It was a living commitment from one man to another, witnessed in the open, honoured on the agreed day, and carrying no interest — for usury was recognised as theft of time, which belongs to no man. The modern world buried this word beneath layers of banking law, central authority, and corporate abstraction. Bills became instruments of control rather than instruments of trust. The Living Way restores the Wechsel to its rightful place: an open record of exchange between living souls on the land, visible to all within the solven, altered by none, and answerable to no bank, no sea, no admiral, and no crown. Where the Wechsel stands, hidden ledgers fall.",
     docs: [],
   },
 
@@ -161,7 +164,7 @@ export const goals = [
     textColor: "#c8f080",
     summary: "Soil vitality as the foundation of all living systems.",
     description:
-    "Imagine the world without chemical pesticides, herbicides and toxic fertilizers. Such world is real. all chronic intoxications will remain in the anals of history, in our new living circle the natural method will be used, without causing damage to the land around us. Our goal is to keep the soil clean and independent, and the genetics of the crops to become stronger, able to defend themselves naturally. a separate group of solvens who want to study this area of ​​​​knowledge unite, experiment, share knowledge and implement new ideas related to electroculture and permaculture.",
+      "Imagine the world without chemical pesticides, herbicides and toxic fertilizers. Such world is real. all chronic intoxications will remain in the anals of history, in our new living circle the natural method will be used, without causing damage to the land around us. Our goal is to keep the soil clean and independent, and the genetics of the crops to become stronger, able to defend themselves naturally. a separate group of solvens who want to study this area of ​​​​knowledge unite, experiment, share knowledge and implement new ideas related to electroculture and permaculture.",
     docs: [],
   },
 
